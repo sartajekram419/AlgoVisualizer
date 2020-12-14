@@ -19,18 +19,10 @@ import java.util.ResourceBundle;
 
 public class StartingPageController implements Initializable {
 
-    @FXML
-    private AnchorPane StartingPage;
-
-    @FXML
-    private Label TitleLabel;
-
-    @FXML
-    private Button button;
-
-    @FXML
-    private Label EnterKeyLabel;
-
+    @FXML private AnchorPane StartingPage;
+    @FXML private Label TitleLabel;
+    @FXML private Button button;
+    @FXML private Label EnterKeyLabel;
 
     @FXML
     void buttonPressed(ActionEvent event) throws IOException {
@@ -46,10 +38,8 @@ public class StartingPageController implements Initializable {
         button.getScene().getWindow().hide();
     }
 
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         new BounceIn(TitleLabel).play();
     }
-
 }
