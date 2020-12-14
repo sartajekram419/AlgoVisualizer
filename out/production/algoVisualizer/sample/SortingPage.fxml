@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="460.0" prefWidth="800.0" style="-fx-background-color: #263238;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SortingPageController">
+    <children>
+        <Pane fx:id="SortingPage" layoutY="6.0" prefHeight="370.0" prefWidth="800.0" rotate="180.0" stylesheets="@SortingPage.css" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label fx:id="comp" layoutX="9.0" layoutY="307.0" prefHeight="51.0" prefWidth="168.0" rotate="180.0" />
+            </children></Pane>
+        <Button fx:id="sortButton" alignment="CENTER" contentDisplay="CENTER" layoutX="95.0" layoutY="399.0" mnemonicParsing="false" onAction="#sortButtonAction" prefHeight="38.0" prefWidth="66.0" text="Sort">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font></Button>
+        <Button fx:id="randomButton" layoutX="364.0" layoutY="399.0" mnemonicParsing="false" onAction="#randomButtonAction" prefHeight="38.0" prefWidth="101.0" text="Shuffle" />
+        <ChoiceBox fx:id="chooseBox" layoutX="581.0" layoutY="399.0" prefHeight="38.0" prefWidth="150.0" />
+        <ChoiceBox fx:id="speedBox" layoutX="503.0" layoutY="399.0" prefHeight="38.0" prefWidth="66.0" />
+        <Button fx:id="pauseButton" layoutX="229.0" layoutY="399.0" mnemonicParsing="false" onAction="#pauseButtonAction" prefHeight="38.0" prefWidth="84.0" text="Pause" />
+    </children>
+</AnchorPane>
