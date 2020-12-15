@@ -13,11 +13,8 @@ import java.io.IOException;
 
 public class MenuPageController {
 
-    @FXML
-    private AnchorPane MenuPage;
-
-    @FXML
-    private Button InsertionSortButton;
+    @FXML private AnchorPane MenuPage;
+    @FXML private Button InsertionSortButton;
 
     @FXML
     void InsertionSortButtonPressed(ActionEvent event) throws IOException {
