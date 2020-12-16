@@ -22,6 +22,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.StringConverter;
 import javafx.beans.value.*;
 import javafx.scene.paint.Color;
@@ -40,6 +41,8 @@ public class SortingPageController implements Initializable {
     @FXML private AnchorPane SortingPage;
     @FXML private TextField ElementCountButton;
     @FXML private AnchorPane LowerPane;
+    @FXML private Button CustomButton;
+
 
 
     Connection connection;
@@ -56,18 +59,43 @@ public class SortingPageController implements Initializable {
     private Node nodes[];
     public static AbstractSort abstractSort;
 
+
+
+    @FXML
+    void CustomButtonAction(ActionEvent event) throws IOException {
+
+        int[] arr = new int[NO_OF_NODES];
+        Parent root = FXMLLoader.load(getClass().getResource("CustomInputPage.fxml"));
+        Stage primaryStage = new Stage();
+        primaryStage.setTitle("AlgoVisualizer");
+        primaryStage.setScene(new Scene(root,600,550));
+        primaryStage.showAndWait();
+        arr = CustomInputPageController.arr;
+
+        /////System.out.println(CustomInputPageController.a);
+        /////System.out.println(' ');
+
+        /////for(int i=0;i<NO_OF_NODES;i++)System.out.println(arr[i]);
+
+        CustomGenerator(NO_OF_NODES,arr);
+    }
+
+
+
     @FXML
     void ElementCountButton(ActionEvent event) {
+
         String s = ElementCountButton.getText();
         NO_OF_NODES = Integer.parseInt(s);
         this.abstractSort.setX();
-        generator(NO_OF_NODES);
-        System.out.println(NO_OF_NODES);
+        randomGenerator(NO_OF_NODES);;
+
+        //System.out.println(NO_OF_NODES);
     }
 
     @FXML
     void randomButtonAction(ActionEvent event) {
-        generator(NO_OF_NODES);
+        randomGenerator(NO_OF_NODES);
     }
 
     @FXML
@@ -103,10 +131,17 @@ public class SortingPageController implements Initializable {
     }
 
 
-    public void generator(int val) {
+    public void randomGenerator(int val) {
         sortButton.setDisable(false);
         SortingPagePane.getChildren().clear();
         this.nodes = GenerateRandomNodes.GenerateRandomNodes(val);
+        SortingPagePane.getChildren().addAll(Arrays.asList(nodes));
+    }
+
+    public void CustomGenerator(int val, int[] arr) {
+        sortButton.setDisable(false);
+        SortingPagePane.getChildren().clear();
+        this.nodes = GenerateCustomNodes.GenerateCustomNodes(val,arr);
         SortingPagePane.getChildren().addAll(Arrays.asList(nodes));
     }
 
@@ -117,9 +152,9 @@ public class SortingPageController implements Initializable {
 
         pauseButton.setDisable(true);
 
-        //this.nodes = GenerateRandomNodes.GenerateRandomNodes(NO_OF_NODES);
-        //SortingPagePane.getChildren().addAll(Arrays.asList(nodes));
-        generator(NO_OF_NODES);
+        this.nodes = GenerateRandomNodes.GenerateRandomNodes(NO_OF_NODES);
+        SortingPagePane.getChildren().addAll(Arrays.asList(nodes));
+        //randomGenerator(NO_OF_NODES);
         //for (int i = 0; i < NO_OF_NODES; i++) System.out.println(nodes[i].getValue());
 
         Integer speed[] = {1, 5, 10, 50, 100, 250, 500};

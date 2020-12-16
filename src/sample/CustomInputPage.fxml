@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CustomInputPageController">
+   <children>
+      <Label layoutX="37.0" layoutY="33.0" prefHeight="27.0" prefWidth="225.0" text="Enter input elements below:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="363.0" layoutY="38.0" text="*Inputs should be seperated by space" />
+      <Button fx:id="OkButton" layoutX="273.0" layoutY="359.0" mnemonicParsing="false" onAction="#OkButtonPressed" prefHeight="26.0" prefWidth="54.0" text="Ok" />
+      <TextArea fx:id="TextInput" layoutX="38.0" layoutY="66.0" prefHeight="284.0" prefWidth="524.0" />
+   </children>
+</AnchorPane>

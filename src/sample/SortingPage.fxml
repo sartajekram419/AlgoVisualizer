@@ -9,8 +9,8 @@
 
 <AnchorPane fx:id="SortingPage" prefHeight="460.0" prefWidth="800.0" stylesheets="@SortingPage.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SortingPageController">
     <children>
-        <Pane fx:id="SortingPagePane" prefHeight="334.0" prefWidth="800.0" rotate="180.0" AnchorPane.bottomAnchor="270.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0" />
-      <AnchorPane fx:id="LowerPane" layoutY="187.0" prefHeight="270.0" prefWidth="800.0" stylesheets="@SortingPage.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <Pane fx:id="SortingPagePane" prefHeight="334.0" prefWidth="800.0" rotate="180.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="250.0" />
+      <AnchorPane fx:id="LowerPane" prefHeight="250.0" prefWidth="800.0" stylesheets="@SortingPage.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
               <Button fx:id="sortButton" alignment="CENTER" contentDisplay="CENTER" layoutX="66.0" layoutY="209.0" mnemonicParsing="false" onAction="#sortButtonAction" prefHeight="38.0" prefWidth="66.0" text="Start" AnchorPane.bottomAnchor="22.99999999999997">
                   <font>
@@ -22,6 +22,7 @@
               <ChoiceBox fx:id="speedBox" layoutX="367.0" layoutY="190.0" prefHeight="38.0" prefWidth="66.0" AnchorPane.bottomAnchor="41.99999999999997" />
               <Button fx:id="pauseButton" layoutX="226.0" layoutY="202.0" mnemonicParsing="false" onAction="#pauseButtonAction" prefHeight="38.0" prefWidth="84.0" text="Pause" AnchorPane.bottomAnchor="29.99999999999997" />
             <TextField fx:id="ElementCountButton" onAction="#ElementCountButton" promptText="No. of Elements" AnchorPane.bottomAnchor="80.0" />
+            <Button fx:id="CustomButton" layoutX="174.0" layoutY="89.0" mnemonicParsing="false" onAction="#CustomButtonAction" prefHeight="38.0" prefWidth="57.0" text="Custom" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="80.0" />
          </children>
       </AnchorPane>
     </children>
