@@ -4,7 +4,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="MenuPage" prefHeight="400.0" prefWidth="599.0" stylesheets="@MenuPage.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MenuPageController">
    <children>
       <Button fx:id="InsertionSortButton" alignment="CENTER" contentDisplay="CENTER" layoutX="274.0" layoutY="188.0" mnemonicParsing="false" onAction="#InsertionSortButtonPressed" text="Insertion Sort" textAlignment="CENTER">
@@ -12,5 +11,6 @@
             <Font size="64.0" />
          </font>
       </Button>
+      <Button fx:id="GraphTraversal" layoutX="282.0" layoutY="118.0" mnemonicParsing="false" onAction="#GraphTraversalButtonPressed" text="Graph Traversal" />
    </children>
 </AnchorPane>
