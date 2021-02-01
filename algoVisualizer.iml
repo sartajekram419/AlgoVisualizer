@@ -10,5 +10,6 @@
     <orderEntry type="library" name="lib" level="project" />
     <orderEntry type="library" name="io.github.typhon0:AnimateFX:1.2.1" level="project" />
     <orderEntry type="library" name="JavaFX" level="project" />
+    <orderEntry type="library" name="Nifty" level="project" />
   </component>
 </module>
