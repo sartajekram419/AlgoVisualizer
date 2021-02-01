@@ -12,5 +12,7 @@
          </font>
       </Button>
       <Button fx:id="GraphTraversal" layoutX="282.0" layoutY="118.0" mnemonicParsing="false" onAction="#GraphTraversalButtonPressed" text="Graph Traversal" />
+      <Button fx:id="SearchButton" layoutX="127.0" layoutY="138.0" mnemonicParsing="false" onAction="#SearchButtonPressed" text="Search" />
+      <Button fx:id="PathFinderButton" layoutX="230.0" layoutY="272.0" mnemonicParsing="false" onAction="#PathFinderButtonPressed" text="Path Finder" />
    </children>
 </AnchorPane>

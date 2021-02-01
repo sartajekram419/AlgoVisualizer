@@ -101,6 +101,7 @@ public class Graph {
 
     static Line createEdge(double fromX, double fromY, double toX, double toY){
         Line edge = new Line(fromX, fromY, toX, toY);
+        edge.setStyle("-fx-stroke: #ff0000;");
         //edge.setOpacity(0.5);
         return edge;
     }

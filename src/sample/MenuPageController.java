@@ -12,9 +12,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyCodeCombination;
-import javafx.scene.input.KeyCombination;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -23,18 +20,36 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Scanner;
 
 public class MenuPageController {
 
     @FXML private AnchorPane MenuPage;
     @FXML private Button InsertionSortButton;
     @FXML private Button GraphTraversal;
+    @FXML private Button SearchButton;
+    @FXML private Button PathFinderButton;
+
+    @FXML
+    void PathFinderButtonPressed(ActionEvent event) {
+
+    }
+
+    @FXML
+    void SearchButtonPressed(ActionEvent event) throws IOException {
+        Stage primaryStage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("SearchPage.fxml"));
+        primaryStage.setTitle("AlgoVisualizer");
+        primaryStage.setScene(new Scene(root));
+        //primaryStage.initStyle(StageStyle.UNDECORATED);
+        primaryStage.setMaximized(true);
+        primaryStage.setResizable(false);
+        primaryStage.show();
+
+        InsertionSortButton.getScene().getWindow().hide();
+    }
+
+
 
     @FXML
     void InsertionSortButtonPressed(ActionEvent event) throws IOException {
@@ -64,9 +79,15 @@ public class MenuPageController {
 
     @FXML
     void GraphTraversalButtonPressed(ActionEvent event) throws IOException{
+
         Stage primaryStage = new Stage();
+        primaryStage.setMaximized(true);
+        primaryStage.setResizable(false);
+
+        GraphTraversal.getScene().getWindow().hide();
+
         Rectangle board = new Rectangle(0,0, 500,400);
-        board.setFill(Color.CYAN);
+        board.setFill(Color.web("0x170538",1.0));
         board.setOnMouseClicked(e->addNode(e.getX(), e.getY()));
 
         displayPane = new Pane(board);
@@ -90,14 +111,6 @@ public class MenuPageController {
             }
         });
 
-        Button saveBtn = new Button("Save Graph");
-        saveBtn.setOnAction(e-> {
-            if(graph.size()>0)
-                promptToSave();
-        });
-
-        Button loadBtn = new Button("Load Graph");
-        loadBtn.setOnAction(e->promptToLoad());
 
         Button clearBtn = new Button("Clear All");
         clearBtn.setOnAction(e->{
@@ -107,7 +120,7 @@ public class MenuPageController {
         });
 
         Label radiusSliderLbl = new Label("Radius");
-        Slider radiusSlider = new Slider(15, 25, 5);
+        Slider radiusSlider = new Slider(10, 30, 20);
         radiusSlider.setBlockIncrement(5);
         radiusSlider.setShowTickMarks(true);
         radiusSlider.setShowTickLabels(true);
@@ -116,11 +129,11 @@ public class MenuPageController {
         nodeRadius.bind(radiusSlider.valueProperty());
 
 
-        VBox optionPane = new VBox(saveBtn, loadBtn, runDFSBtn, runBFSBtn, radiusSliderLbl, radiusSlider, clearBtn);
-        optionPane.setSpacing(10);
+        VBox optionPane = new VBox(runDFSBtn, runBFSBtn, radiusSliderLbl, radiusSlider, clearBtn);
+        optionPane.setSpacing(25);
         //optionPane.setAlignment(Pos.CENTER);
-        optionPane.setPadding(new Insets(10));
-        optionPane.setMinWidth(120);
+        optionPane.setPadding(new Insets(25));
+        optionPane.setMinWidth(220);
 
         HBox mainPane = new HBox(optionPane, displayPane);
         mainPane.setAlignment(Pos.CENTER);
@@ -129,21 +142,6 @@ public class MenuPageController {
         Scene visualBoard = new Scene(mainPane, 630,400);
         board.widthProperty().bind(visualBoard.widthProperty());
         board.heightProperty().bind(visualBoard.heightProperty());
-
-
-        visualBoard.getAccelerators().put(new KeyCodeCombination(KeyCode.S, KeyCombination.CONTROL_DOWN), ()->{
-            if(graph.size() > 0){
-                if(savedFile != null) {
-                    try {
-                        saveGraph(savedFile);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else
-                    promptToSave();
-            }
-        });
 
 
         primaryStage.setScene(visualBoard);
@@ -172,75 +170,8 @@ public class MenuPageController {
         });
     }
 
-    void saveGraph(String filename) throws IOException {
-        File savedFile = new File(filename);
-        FileWriter fout = new FileWriter(savedFile);
-        fout.append(graph.size() + "\n");
-        for(GraphNode graphNode :graph.getGraphNodeList()){
-            fout.append(graphNode.getNode().getCenterX() + " " + graphNode.getNode().getCenterY() + " " + graphNode.getNode().getRadius() + "\n");
-        }
-        fout.append(graph.getEdgeList().size() + "\n");
-        for(ArrayList<Integer> edge:graph.getEdgeList()){
-            fout.append(edge.get(0) + " " + edge.get(1) +"\n");
-        }
-        this.savedFile = filename;
-        fout.close();
-    }
 
-    void loadGraph(String filename) throws FileNotFoundException {
-        Scanner scan = new Scanner(new File(filename));
-        int n = scan.nextInt();
 
-        graph= new Graph(displayPane);
-
-        //displayPane.getChildren().clear();
-        for(int i=0;i<n;i++){
-            double x = scan.nextDouble();
-            double y = scan.nextDouble();
-            double r = scan.nextDouble();
-            addNode(x, y, r);
-        }
-        int m = scan.nextInt();
-        for(int i=0;i<m;i++){
-            int u = scan.nextInt();
-            int v = scan.nextInt();
-            addEdge(u, v);
-        }
-        savedFile = filename;
-    }
-
-    void promptToSave(){
-        PromptWindow saveWindow = new PromptWindow("Name", "Save");
-        saveWindow.getButton().setOnAction(e->{
-            if(!saveWindow.getTextField().getText().isEmpty()){
-                try {
-                    saveGraph(saveWindow.getTextField().getText() + ".gph");
-                    saveWindow.getWindowStage().close();
-                } catch (IOException ioException) {
-                    ioException.printStackTrace();
-                }
-            }
-        });
-        saveWindow.run();
-    }
-
-    void promptToLoad(){
-        PromptWindow loadWindow = new PromptWindow("Name", "Load");
-        loadWindow.getButton().setOnAction(e->{
-            if(!loadWindow.getTextField().getText().isEmpty()){
-                try{
-                    loadGraph(loadWindow.getTextField().getText() + ".gph");
-                    loadWindow.getWindowStage().close();
-                }
-                catch (FileNotFoundException fileNotFoundException){
-                    //fileNotFoundException.printStackTrace();
-                    loadWindow.getTextField().setText("**Invalid name!");
-                }
-            }
-        });
-        loadWindow.getTextField().setOnMouseClicked(e->loadWindow.getTextField().clear());
-        loadWindow.run();
-    }
 
     void addEdge(int u, int v){
         graph.addUndirectedEdge(u,v);

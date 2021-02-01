@@ -45,7 +45,7 @@ public class GraphNode {
 
     public void drawNode(Pane displayPane) {
         Text textNodeID = new Text(String.valueOf(nodeID));
-        textNodeID.setFill(Color.YELLOW);
+        textNodeID.setFill(Color.BLACK);
         textNodeID.setFont(Font.font(node.getRadius()));
         StackPane nodePane = new StackPane(node, textNodeID);
         nodePane.setLayoutX(node.getCenterX() - node.getRadius());
@@ -55,7 +55,7 @@ public class GraphNode {
 
     public static Circle createNode(double x, double y, double r){
         Circle gnode = new Circle(x,y, r);
-        gnode.setFill(Color.RED);
+        gnode.setFill(Color.WHITE);
         return gnode;
     }
 
