@@ -57,11 +57,10 @@ public class SearchPageController {
     @FXML
     void BinarySearchButtonPressed(ActionEvent event) {
 
+        binaryRecursion(0,arraySize);
+
     }
 
-    private static void delaytime() throws InterruptedException {
-        Thread.sleep(3000);
-    }
 
     @FXML
     void LinearSearchButton(ActionEvent event) throws InterruptedException {
@@ -69,6 +68,38 @@ public class SearchPageController {
 
         linearRecursion(0, arraySize);
 
+    }
+
+    void binaryRecursion(int l, int r){
+        KeyFrame bfsKeyFrame = new KeyFrame(Duration.seconds(1), e->{
+
+            int m=(l+r)/2;
+            if(m<arraySize && array[m]==searchElement){
+                searchNodeList.get(m).getNode().setFill(Color.BLUE);
+                visualizer.stop();
+                msg.setText("Element Found");
+            }
+            else if(l<r && array[m]>searchElement){
+                searchNodeList.get(m).getNode().setFill(Color.BLUE);
+                binaryRecursion(l,m-1);
+            }
+            else if(l<r && array[m]<searchElement){
+                searchNodeList.get(m).getNode().setFill(Color.BLUE);
+                binaryRecursion(m+1,r);
+            }
+            else if(l<r){
+                searchNodeList.get(m).getNode().setFill(Color.BLUE);
+                visualizer.stop();
+                msg.setText("Element Found");
+            }
+            else{
+                visualizer.stop();
+                msg.setText("Element Not Found");
+            }
+        });
+        visualizer = new Timeline(bfsKeyFrame);
+        visualizer.setCycleCount(Animation.INDEFINITE);
+        visualizer.play();
     }
 
     void linearRecursion(int i, int n){
@@ -106,6 +137,6 @@ public class SearchPageController {
 
     public int arraySize = 5;
     public int array[] = {1, 2, 3, 4, 5};
-    public int searchElement = 3;
+    public int searchElement = 4;
 
 }
