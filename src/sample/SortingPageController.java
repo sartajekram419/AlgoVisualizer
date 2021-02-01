@@ -61,7 +61,7 @@ public class SortingPageController implements Initializable {
 
     // Nifty WINDOW_WIDTH = dummy WINDOW_HEIGHT = dummy
 
-    public static final int BUTTON_BOUNDARY = 100;
+    public static final int BUTTON_BOUNDARY = 0;
     public static final int X_GAP = 10;
     public static int NO_OF_NODES = 50;
     public static int SPEED = 1;
