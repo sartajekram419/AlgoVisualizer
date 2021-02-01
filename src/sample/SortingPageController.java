@@ -50,8 +50,17 @@ public class SortingPageController implements Initializable {
     boolean running = false;
 
     // Sartaj WINDOW_WIDTH = 1530 WINDOW_HEIGHT = 600
-    public static final int WINDOW_WIDTH = 1530;
-    public static final int WINDOW_HEIGHT = 600;
+
+   /* public static final int WINDOW_WIDTH = 1530;
+    public static final int WINDOW_HEIGHT = 600;*/
+
+    // Sajid WINDOW_WIDTH = 1366 WINDOW_HEIGHT = 500
+
+    public static final int WINDOW_WIDTH = 1366;
+    public static final int WINDOW_HEIGHT = 500;
+
+    // Nifty WINDOW_WIDTH = dummy WINDOW_HEIGHT = dummy
+
     public static final int BUTTON_BOUNDARY = 100;
     public static final int X_GAP = 10;
     public static int NO_OF_NODES = 50;
