@@ -49,6 +49,7 @@ public class SortingPageController implements Initializable {
     SequentialTransition st;
     boolean running = false;
 
+    // Sartaj WINDOW_WIDTH = 1530 WINDOW_HEIGHT = 600
     public static final int WINDOW_WIDTH = 1530;
     public static final int WINDOW_HEIGHT = 600;
     public static final int BUTTON_BOUNDARY = 100;
