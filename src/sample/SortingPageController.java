@@ -189,6 +189,7 @@ public class SortingPageController implements Initializable {
         sortList.add(new SelectionSort());
         sortList.add(new QuickSort());
         sortList.add(new BubbleSort());
+        sortList.add(new MergeSort());
 
 
         chooseBox.setValue(new InsertionSort());

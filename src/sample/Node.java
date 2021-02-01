@@ -1,8 +1,11 @@
 package sample;
 
 import javafx.animation.TranslateTransition;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
+
+import java.util.List;
 
 
 public class Node extends Rectangle {
@@ -11,6 +14,8 @@ public class Node extends Rectangle {
     public Node(int n) {
         val = n;
     }
+
+
 
     public int getValue() {
         return val;
