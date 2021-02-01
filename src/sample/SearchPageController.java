@@ -1,19 +1,26 @@
 package sample;
 
-import javafx.animation.TranslateTransition;
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
-import javafx.scene.text.Font;
-import javafx.scene.text.Text;
 import javafx.util.Duration;
 
+import java.util.ArrayList;
+
 public class SearchPageController {
+
+    private ArrayList<SearchNode> searchNodeList;
+    private Timeline visualizer;
+
+    @FXML
+    private Label msg;
 
     @FXML
     private Button LinearSearchButton;
@@ -39,20 +46,12 @@ public class SearchPageController {
     @FXML
     void OkButtonPressed(ActionEvent event) {
 
-        for(int i=0; i<arraySize; i++) {
-            Text textNodeID = new Text(String.valueOf(array[i]));
-            textNodeID.setFill(Color.BLACK);
-            Circle node = new Circle();
-            node.setFill(Color.RED);
-            node.setRadius(10);
-            node.setCenterX(i*20+i*15);
-            node.setCenterY(20);
-            textNodeID.setFont(Font.font(node.getRadius()));
-            StackPane nodePane = new StackPane(node, textNodeID);
-            nodePane.setLayoutX(node.getCenterX() - node.getRadius());
-            nodePane.setLayoutY(node.getCenterY() - node.getRadius());
-            ArrayHolder.getChildren().add(nodePane);
+        searchNodeList = new ArrayList<>();
+
+        for(int i=0;i<arraySize;i++){
+            searchNodeList.add(new SearchNode(ArrayHolder,array[i],i));
         }
+
     }
 
     @FXML
@@ -60,33 +59,37 @@ public class SearchPageController {
 
     }
 
+    private static void delaytime() throws InterruptedException {
+        Thread.sleep(3000);
+    }
+
     @FXML
-    void LinearSearchButton(ActionEvent event) {
+    void LinearSearchButton(ActionEvent event) throws InterruptedException {
 
 
-        for(int i=0; i<arraySize; i++) {
+        linearRecursion(0, arraySize);
 
-            Text textNodeID = new Text(String.valueOf(searchElement));
-            textNodeID.setFill(Color.BLACK);
-            Circle node = new Circle();
-            node.setFill(Color.RED);
-            node.setRadius(10);
-            node.setCenterX(i*20+i*15);
-            node.setCenterY(20);
-            textNodeID.setFont(Font.font(node.getRadius()));
-            StackPane nodePane = new StackPane(node, textNodeID);
-            nodePane.setLayoutX(node.getCenterX() - node.getRadius());
-            nodePane.setLayoutY(node.getCenterY() - node.getRadius());
+    }
 
-            TranslateTransition trans1 = new TranslateTransition();
-            trans1.setByY(300);
-            trans1.setCycleCount(50);
-            trans1.setDuration(Duration.millis(500));
-            trans1.setAutoReverse(true);
-            trans1.setNode(nodePane);
-            trans1.play();
-
-        }
+    void linearRecursion(int i, int n){
+        KeyFrame bfsKeyFrame = new KeyFrame(Duration.seconds(1), e->{
+            if(i<arraySize && array[i]!=searchElement){
+                searchNodeList.get(i).getNode().setFill(Color.BLUE);
+                linearRecursion(i+1,n);
+            }
+            else if(i<arraySize){
+                searchNodeList.get(i).getNode().setFill(Color.BLUE);
+                visualizer.stop();
+                msg.setText("Element Found");
+            }
+            else{
+                visualizer.stop();
+                msg.setText("Element Not Found");
+            }
+        });
+        visualizer = new Timeline(bfsKeyFrame);
+        visualizer.setCycleCount(Animation.INDEFINITE);
+        visualizer.play();
     }
 
     @FXML
