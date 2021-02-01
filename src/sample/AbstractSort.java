@@ -17,7 +17,7 @@ public abstract class AbstractSort {
     public final Color FINAL_COLOR = Color.web("0xe53935",1.0);
     public final Color SORTED_COLOR = Color.web("0xf4511e",1.0);
 
-    static int X;
+    static public int X;
     ParallelTransition p;
     FillTransition f;
 

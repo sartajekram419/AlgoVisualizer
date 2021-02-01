@@ -87,7 +87,8 @@ public class SortingPageController implements Initializable {
 
         String s = ElementCountButton.getText();
         NO_OF_NODES = Integer.parseInt(s);
-        this.abstractSort.setX();
+        abstractSort.X = WINDOW_WIDTH / NO_OF_NODES;
+        //this.abstractSort.setX();
         randomGenerator(NO_OF_NODES);;
 
         //System.out.println(NO_OF_NODES);
@@ -177,7 +178,7 @@ public class SortingPageController implements Initializable {
         sortList.add(new InsertionSort());
         //sortList.add(new SelectionSort());
         //sortList.add(new QuickSort());
-        //sortList.add(new BubbleSort());
+        sortList.add(new BubbleSort());
 
         chooseBox.setValue(new InsertionSort());
         Tooltip tt2 = new Tooltip();
