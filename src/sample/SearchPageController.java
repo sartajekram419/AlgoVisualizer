@@ -84,8 +84,10 @@ public class SearchPageController {
         primaryStage.setScene(new Scene(root,600,600));
         primaryStage.showAndWait();
 
+        //System.out.println(SearchCustomInputController.arr[0]);
         array = new int[arraySize];
         array = SearchCustomInputController.arr;
+
         searchNodeList = new ArrayList<>();
 
         for(int i=0;i<arraySize;i++){
@@ -177,7 +179,6 @@ public class SearchPageController {
         KeyFrame bfsKeyFrame = new KeyFrame(Duration.seconds(1), e->{
 
             int m=(l+r)/2;
-            System.out.println(array[m] + " " + searchElement);
             if(m<arraySize && array[m]==searchElement){
                 searchNodeList.get(m).getNode().setFill(Color.BLUE);
                 visualizer.stop();
