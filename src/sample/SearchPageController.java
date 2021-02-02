@@ -15,6 +15,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -26,7 +27,7 @@ public class SearchPageController {
     private ArrayList<SearchNode> searchNodeList;
     private Timeline visualizer;
 
-    public int arraySize = 5;
+    public static int arraySize = 5;
     public int[] array;
     public int searchElement = 4;
 
@@ -73,13 +74,37 @@ public class SearchPageController {
     private Button CodeButton;
 
     @FXML
-    void InputButtonPressed(ActionEvent event) {
+    void InputButtonPressed(ActionEvent event) throws IOException {
+        Stage primaryStage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("SearchCustomInput.fxml"));
+        primaryStage.setTitle("AlgoVisualizer");
+        //primaryStage.initStyle(StageStyle.UNDECORATED);
+        //primaryStage.setMaximized(true);
+        //primaryStage.setResizable(false);
+        primaryStage.setScene(new Scene(root,600,600));
+        primaryStage.showAndWait();
 
+        array = new int[arraySize];
+        array = SearchCustomInputController.arr;
+        searchNodeList = new ArrayList<>();
+
+        for(int i=0;i<arraySize;i++){
+            searchNodeList.add(new SearchNode(ArrayHolder,array[i],i));
+        }
     }
 
     @FXML
-    void ClearButtonPressed(ActionEvent event) {
+    void ClearButtonPressed(ActionEvent event) throws IOException {
+        Stage primaryStage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("SearchPage.fxml"));
+        primaryStage.setTitle("AlgoVisualizer");
+        primaryStage.initStyle(StageStyle.UNDECORATED);
+        primaryStage.setMaximized(true);
+        primaryStage.setResizable(false);
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
 
+        ClearButton.getScene().getWindow().hide();
     }
 
     @FXML
@@ -112,6 +137,7 @@ public class SearchPageController {
     @FXML
     void OkButtonPressed(ActionEvent event) {
 
+        msg.setText("");
         array = new int[arraySize];
         Random rand = new Random();
 
@@ -205,7 +231,6 @@ public class SearchPageController {
     void SearchElementPressed(ActionEvent event) {
         String s = SearchElement.getText();
         searchElement = Integer.parseInt(s);
-        System.out.println(searchElement);
     }
 
     @FXML

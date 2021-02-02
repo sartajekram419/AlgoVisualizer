@@ -14,7 +14,7 @@ public class SearchNode {
     private int nodeValue;
 
     public SearchNode(Pane displayNode, int n, int i){
-            this(createNode(i*20+i*15, 25, 10), i, n);
+            this(createNode(i*50+i*15, 25, 25), i, n);
             drawNode(displayNode, n);
     }
 
@@ -41,7 +41,7 @@ public class SearchNode {
 
     public static Circle createNode(double x, double y, double r){
         Circle gnode = new Circle(x,y, r);
-        gnode.setFill(Color.RED);
+        gnode.setFill(Color.LIGHTBLUE);
         return gnode;
     }
 
