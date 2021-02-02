@@ -47,10 +47,7 @@ public class SearchPageController {
     @FXML
     void OkButtonPressed(ActionEvent event) {
 
-
-        //searchNodeList.removeAll(searchNodeList);
         searchNodeList = new ArrayList<>();
-        System.out.println(searchNodeList.size());
 
         for(int i=0;i<arraySize;i++){
             searchNodeList.add(new SearchNode(ArrayHolder,array[i],i));
@@ -62,9 +59,7 @@ public class SearchPageController {
     void BinarySearchButtonPressed(ActionEvent event) {
 
         binaryRecursion(0,arraySize);
-
     }
-
 
     @FXML
     void LinearSearchButton(ActionEvent event) throws InterruptedException {

@@ -1,12 +1,10 @@
 package sample;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
-import javafx.scene.paint.Color;
 import javafx.animation.ParallelTransition;
 import javafx.animation.Transition;
-import sample.AbstractSort;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 
 
@@ -41,7 +39,7 @@ public class InsertionSort extends AbstractSort {
 
             p.getChildren().add(number.moveX(X * (j+1-i)));
             transitions.add(p);
-            transitions.add(colorNode(nodes, Color.ALICEBLUE, j+1));
+            transitions.add(colorNode(nodes, SORTED_COLOR, j+1));
         }
         transitions.add(colorNode(Arrays.asList(nodes), FINAL_COLOR));
         return transitions;

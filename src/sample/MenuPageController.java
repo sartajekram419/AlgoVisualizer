@@ -19,6 +19,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -28,12 +29,7 @@ public class MenuPageController {
     @FXML private Button InsertionSortButton;
     @FXML private Button GraphTraversal;
     @FXML private Button SearchButton;
-    @FXML private Button PathFinderButton;
 
-    @FXML
-    void PathFinderButtonPressed(ActionEvent event) {
-
-    }
 
     @FXML
     void SearchButtonPressed(ActionEvent event) throws IOException {
@@ -57,7 +53,7 @@ public class MenuPageController {
         Parent root = FXMLLoader.load(getClass().getResource("SortingPage.fxml"));
         primaryStage.setTitle("AlgoVisualizer");
         primaryStage.setScene(new Scene(root));
-        //primaryStage.initStyle(StageStyle.UNDECORATED);
+        primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setMaximized(true);
         primaryStage.setResizable(false);
         primaryStage.show();
@@ -71,7 +67,6 @@ public class MenuPageController {
     private Graph graph;
     private Pane displayPane;
 
-    private String savedFile = null;
 
     private int selectedNode = -1;
 
@@ -81,17 +76,56 @@ public class MenuPageController {
     void GraphTraversalButtonPressed(ActionEvent event) throws IOException{
 
         Stage primaryStage = new Stage();
+        primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setMaximized(true);
         primaryStage.setResizable(false);
 
-        GraphTraversal.getScene().getWindow().hide();
+
 
         Rectangle board = new Rectangle(0,0, 500,400);
-        board.setFill(Color.web("0x170538",1.0));
+        board.setFill(Color.web("0x151019",1.0));
         board.setOnMouseClicked(e->addNode(e.getX(), e.getY()));
 
         displayPane = new Pane(board);
         graph = new Graph(displayPane);
+
+
+        Button sourceButton = new Button("Source Code");
+        sourceButton.setOnAction(e->{
+            Stage stage = new Stage();
+            Parent root = null;
+            try {
+                root = FXMLLoader.load(getClass().getResource("GraphSourceCodeWindow.fxml"));
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            }
+            stage.setTitle("AlgoVisualizer");
+            //primaryStage.initStyle(StageStyle.UNDECORATED);
+            //stage.setMaximized(true);
+            //stage.setResizable(false);
+            stage.setScene(new Scene(root,600,600));
+            stage.showAndWait();
+
+        });
+
+        Button backButton = new Button("<< Back");
+        backButton.setOnAction(e->{
+            Stage stage = new Stage();
+            Parent root = null;
+            try {
+                root = FXMLLoader.load(getClass().getResource("MenuPage.fxml"));
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            }
+            stage.setTitle("AlgoVisualizer");
+            //primaryStage.initStyle(StageStyle.UNDECORATED);
+            stage.setMaximized(true);
+            stage.setResizable(false);
+            stage.setScene(new Scene(root));
+            stage.show();
+
+            backButton.getScene().getWindow().hide();
+        });
 
         Button runDFSBtn = new Button("Run DFS");
         runDFSBtn.setOnAction(e->{
@@ -119,7 +153,14 @@ public class MenuPageController {
             graph = new Graph(displayPane);
         });
 
+        backButton.setStyle("-fx-background-color: #151019; -fx-text-fill: white;-fx-font-size: 24px; -fx-pref-width: 175px;");
+        runBFSBtn.setStyle("-fx-background-color: #151019; -fx-text-fill: white;-fx-font-size: 24px; -fx-pref-width: 175px;");
+        runDFSBtn.setStyle("-fx-background-color: #151019; -fx-text-fill: white;-fx-font-size: 24px; -fx-pref-width: 175px;");
+        clearBtn.setStyle("-fx-background-color: #151019; -fx-text-fill: white;-fx-font-size: 24px; -fx-pref-width: 175px;");
+        sourceButton.setStyle("-fx-background-color: #151019; -fx-text-fill: white;-fx-font-size: 24px; -fx-pref-width: 175px;");
+
         Label radiusSliderLbl = new Label("Radius");
+        radiusSliderLbl.setStyle("-fx-font-size: 24px; -fx-text-alignment: center");
         Slider radiusSlider = new Slider(10, 30, 20);
         radiusSlider.setBlockIncrement(5);
         radiusSlider.setShowTickMarks(true);
@@ -129,11 +170,11 @@ public class MenuPageController {
         nodeRadius.bind(radiusSlider.valueProperty());
 
 
-        VBox optionPane = new VBox(runDFSBtn, runBFSBtn, radiusSliderLbl, radiusSlider, clearBtn);
-        optionPane.setSpacing(25);
+        VBox optionPane = new VBox(backButton, runDFSBtn, runBFSBtn, radiusSliderLbl, radiusSlider, clearBtn, sourceButton);
+        optionPane.setSpacing(35);
         //optionPane.setAlignment(Pos.CENTER);
         optionPane.setPadding(new Insets(25));
-        optionPane.setMinWidth(220);
+        optionPane.setMinWidth(320);
 
         HBox mainPane = new HBox(optionPane, displayPane);
         mainPane.setAlignment(Pos.CENTER);
@@ -147,6 +188,8 @@ public class MenuPageController {
         primaryStage.setScene(visualBoard);
         primaryStage.setTitle("Graph Visualizer");
         primaryStage.show();
+
+        GraphTraversal.getScene().getWindow().hide();
     }
 
     void addNode(double x, double y){
@@ -164,7 +207,7 @@ public class MenuPageController {
             }
             else if(selectedNode != graphNode.getNodeID()){
                 addEdge(selectedNode, graphNode.getNodeID());
-                graph.getNode(selectedNode).getNode().setFill(Color.RED);
+                graph.getNode(selectedNode).getNode().setFill(Color.WHITE);
                 selectedNode = -1;
             }
         });

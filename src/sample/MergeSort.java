@@ -1,16 +1,12 @@
 package sample;
 
 
+import javafx.animation.ParallelTransition;
+import javafx.animation.Transition;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import javafx.animation.FillTransition;
-import javafx.animation.ParallelTransition;
-import javafx.animation.Transition;
-import javafx.scene.paint.Color;
-import javafx.util.Duration;
-import sample.AbstractSort;
 
 public class MergeSort extends AbstractSort {
 
@@ -69,7 +65,7 @@ public class MergeSort extends AbstractSort {
         }
 
         transitions.add(pt);
-        transitions.add(colorNode(tmpList, SELECT_COLOR));
+        transitions.add(colorNode(tmpList, SORTED_COLOR));
 
         return transitions;
     }
@@ -95,7 +91,7 @@ public class MergeSort extends AbstractSort {
 
         transitions.addAll(mergeSort(arr, 0, arr.length - 1));
 
-        transitions.add(colorNode(Arrays.asList(arr), SORTED_COLOR));
+        transitions.add(colorNode(Arrays.asList(arr), FINAL_COLOR));
 
         return transitions;
     }

@@ -30,6 +30,7 @@ public class StartingPageController implements Initializable {
         Stage primaryStage = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("MenuPage.fxml"));
         primaryStage.setTitle("AlgoVisualizer");
+        //primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setMaximized(true);
         primaryStage.setResizable(false);
         primaryStage.setScene(new Scene(root));

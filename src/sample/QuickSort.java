@@ -1,14 +1,14 @@
 package sample;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import javafx.animation.Transition;
 import javafx.scene.paint.Color;
-import sample.AbstractSort;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 
 public class QuickSort extends AbstractSort {
-    private static final Color PIVOT_COLOR = Color.CRIMSON;
+    private static final Color PIVOT_COLOR = Color.web("0xf4511e",1.0);
     private ArrayList<Transition> transitions;
 
     public QuickSort() {
@@ -24,13 +24,13 @@ public class QuickSort extends AbstractSort {
         int i = low;
         transitions.add(colorNode(nodes, PIVOT_COLOR, high));
         for (int j = low; j < high; j++) {
-            transitions.add(colorNode(nodes, SELECT_COLOR, j));
+            transitions.add(colorNode(nodes, Color.WHITE, j));
             if (nodes[j].getValue() < nodes[high].getValue()) {
                 transitions.add(swap(nodes, i, j));
-                transitions.add(colorNode(nodes, Color.LIGHTGREEN, i));
+                transitions.add(colorNode(nodes, Color.WHITE, i));
                 i++;
             }
-            else transitions.add(colorNode(nodes, Color.AQUAMARINE, j));
+            else transitions.add(colorNode(nodes, Color.WHITE, j));
         }
         transitions.add(swap(nodes, i, high));
         transitions.add(colorNode(nodes, SORTED_COLOR, i));

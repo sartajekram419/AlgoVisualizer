@@ -1,21 +1,21 @@
 package sample;
 
-import javafx.scene.shape.Shape;
-import sample.SortingPageController;
-import java.util.ArrayList;
-import java.util.List;
-import javafx.scene.paint.Color;
 import javafx.animation.FillTransition;
 import javafx.animation.ParallelTransition;
 import javafx.animation.Transition;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Shape;
 import javafx.util.Duration;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public abstract class AbstractSort {
     public final Color START_COLOR = Color.WHITE;
-    public final Color SELECT_COLOR = Color.VIOLET;
-    public final Color FINAL_COLOR = Color.web("0xe53935",1.0);
-    public final Color SORTED_COLOR = Color.web("0xf4511e",1.0);
+    public final Color SELECT_COLOR = Color.web("0xf4511e",1.0);
+    public final Color FINAL_COLOR = Color.LIGHTGREEN;
+    public final Color SORTED_COLOR = Color.VIOLET;
 
     static public int X;
     ParallelTransition p;

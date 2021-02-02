@@ -95,14 +95,16 @@ public class Graph {
         r = toGraphNode.getNode().getRadius();
         double xl2 = x2 - (s * r * Math.cos(theta));
         double yl2 = y2 - (s * r * Math.sin(theta));
+        fromGraphNode.getNode().setFill(Color.WHITE);
+        toGraphNode.getNode().setFill(Color.WHITE);
 
         return createEdge(xl1, yl1, xl2, yl2);
     }
 
     static Line createEdge(double fromX, double fromY, double toX, double toY){
         Line edge = new Line(fromX, fromY, toX, toY);
-        edge.setStyle("-fx-stroke: #ff0000;");
-        //edge.setOpacity(0.5);
+        edge.setStyle("-fx-stroke: #ffffff;");
+        //edge.setOpacity(2);
         return edge;
     }
 
@@ -112,7 +114,7 @@ public class Graph {
 
     void resetNodesColor(){
         for(GraphNode graphNode : graphNodeList){
-            graphNode.getNode().setFill(Color.RED);
+            graphNode.getNode().setFill(Color.WHITE);
         }
     }
 

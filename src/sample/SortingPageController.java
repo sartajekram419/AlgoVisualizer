@@ -1,32 +1,31 @@
 package sample;
 
-import javafx.event.ActionEvent;
-import java.io.IOException;
-import java.net.URL;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.ResourceBundle;
 import javafx.animation.SequentialTransition;
+import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import javafx.util.StringConverter;
-import javafx.beans.value.*;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
+
+import java.io.IOException;
+import java.net.URL;
+import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.ResourceBundle;
 
 
 public class SortingPageController implements Initializable {
@@ -35,13 +34,27 @@ public class SortingPageController implements Initializable {
     @FXML private Button sortButton;
     @FXML private Button randomButton;
     @FXML private ChoiceBox<AbstractSort> chooseBox;
-    @FXML private ChoiceBox<Integer> nodeBox;
     @FXML private ChoiceBox<Integer> speedBox;
     @FXML private Pane SortingPagePane;
     @FXML private AnchorPane SortingPage;
     @FXML private TextField ElementCountButton;
     @FXML private AnchorPane LowerPane;
     @FXML private Button CustomButton;
+    @FXML private Button BackButton;
+    @FXML private Button SourceButton;
+
+    @FXML
+    void SourceButtonPressed(ActionEvent event) throws IOException {
+        Stage primaryStage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("SourceCodeWindow.fxml"));
+        primaryStage.setTitle("AlgoVisualizer");
+        //primaryStage.initStyle(StageStyle.UNDECORATED);
+        /*primaryStage.setMaximized(true);
+        primaryStage.setResizable(false);*/
+        primaryStage.setScene(new Scene(root,600,600));
+        primaryStage.showAndWait();
+    }
+
 
 
 
@@ -51,23 +64,38 @@ public class SortingPageController implements Initializable {
 
     // Sartaj WINDOW_WIDTH = 1530 WINDOW_HEIGHT = 600
 
-   /* public static final int WINDOW_WIDTH = 1530;
-    public static final int WINDOW_HEIGHT = 600;*/
+    public static final int WINDOW_WIDTH = 1530;
+    public static final int WINDOW_HEIGHT = 600;
 
     // Sajid WINDOW_WIDTH = 1366 WINDOW_HEIGHT = 500
 
-    public static final int WINDOW_WIDTH = 1366;
-    public static final int WINDOW_HEIGHT = 500;
+    /*public static final int WINDOW_WIDTH = 1366;
+    public static final int WINDOW_HEIGHT = 500;*/
 
     // Nifty WINDOW_WIDTH = dummy WINDOW_HEIGHT = dummy
 
     public static final int BUTTON_BOUNDARY = 0;
     public static final int X_GAP = 10;
     public static int NO_OF_NODES = 50;
-    public static int SPEED = 1;
+    public static int SPEED = 20;
 
     private Node nodes[];
     public static AbstractSort abstractSort;
+
+
+    @FXML
+    void BackButtonPressed(ActionEvent event) throws IOException {
+        Stage primaryStage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("MenuPage.fxml"));
+        primaryStage.setTitle("AlgoVisualizer");
+        //primaryStage.initStyle(StageStyle.UNDECORATED);
+        primaryStage.setMaximized(true);
+        primaryStage.setResizable(false);
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
+
+        BackButton.getScene().getWindow().hide();
+    }
 
 
 
@@ -168,12 +196,13 @@ public class SortingPageController implements Initializable {
         //randomGenerator(NO_OF_NODES);
         //for (int i = 0; i < NO_OF_NODES; i++) System.out.println(nodes[i].getValue());
 
-        Integer speed[] = {1, 5, 10, 50, 100, 250, 500};
+        Integer speed[] = {1, 5, 10, 20, 50, 100, 250, 500};
         //speedBox.setValue(50);
         Tooltip tt1 = new Tooltip();
         tt1.setStyle("-fx-base: #AE3522; " + "-fx-text-fill: BLACK;" + "-fx-background-color : WHITE;");
         tt1.setText("Choose Speed");
         speedBox.setTooltip(tt1);
+        speedBox.setValue(20);
         speedBox.setItems(FXCollections.observableArrayList(speed));
 
         speedBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Integer>() {
