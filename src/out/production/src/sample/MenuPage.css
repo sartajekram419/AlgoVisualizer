@@ -7,7 +7,7 @@
 }
 
 #InsertionSortButton {
-    background-color: #4CAF50; /* Green */
+   background-color: #4CAF50;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -15,6 +15,7 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+
 }
 
 #SearchPane{
@@ -43,13 +44,19 @@
 
 .button
 {
-    -fx-background-color: lightblue;
-    -fx-text-fill: Black;
+    -fx-background-color: #151019;
+    -fx-text-fill: white;
+    -fx-border-color: lightblue;
+    -fx-border-width: 1px;
     -fx-border-radius: 30px;
 }
 
-.button:hover
+/*.button:hover
 {
-    -fx-background-color: darkgray;
-    -fx-text-fill: black;
-}
+    -fx-background-color: lightgreen;
+    -fx-text-fill: #151019;
+    -fx-border-color: #151019;
+    -fx-border-radius: 30px;
+   -fx-border-width: 1px;
+   -fx-border-radius: 30px;
+} */
