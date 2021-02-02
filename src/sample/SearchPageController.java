@@ -5,19 +5,42 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class SearchPageController {
 
     private ArrayList<SearchNode> searchNodeList;
     private Timeline visualizer;
+
+    public int arraySize = 5;
+    public int[] array;
+    public int searchElement = 4;
+
+    @FXML
+    private Button InputButton;
+
+    @FXML
+    private Button ClearButton;
+
+    @FXML
+    private AnchorPane MenuPage;
+
+    @FXML
+    private AnchorPane SideBar;
 
     @FXML
     private Label msg;
@@ -43,9 +66,58 @@ public class SearchPageController {
     @FXML
     private Pane MovingElement;
 
+    @FXML
+    private Button BackButton;
+
+    @FXML
+    private Button CodeButton;
+
+    @FXML
+    void InputButtonPressed(ActionEvent event) {
+
+    }
+
+    @FXML
+    void ClearButtonPressed(ActionEvent event) {
+
+    }
+
+    @FXML
+    void BackButtonPressed(ActionEvent event) throws IOException {
+        Stage primaryStage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("MenuPage.fxml"));
+        primaryStage.setTitle("AlgoVisualizer");
+        //primaryStage.initStyle(StageStyle.UNDECORATED);
+        primaryStage.setMaximized(true);
+        primaryStage.setResizable(false);
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
+
+        BackButton.getScene().getWindow().hide();
+    }
+
+    @FXML
+    void CodeButtonPressed(ActionEvent event) throws IOException {
+        Stage primaryStage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("SearchSourceCode.fxml"));
+        primaryStage.setTitle("AlgoVisualizer");
+        //primaryStage.initStyle(StageStyle.UNDECORATED);
+        /*primaryStage.setMaximized(true);
+        primaryStage.setResizable(false);*/
+        primaryStage.setScene(new Scene(root,600,600));
+        primaryStage.showAndWait();
+    }
+
 
     @FXML
     void OkButtonPressed(ActionEvent event) {
+
+        array = new int[arraySize];
+        Random rand = new Random();
+
+        for(int i=0; i<arraySize; i++){
+            array[i] = rand.nextInt(100);
+        }
 
         searchNodeList = new ArrayList<>();
 
@@ -58,6 +130,12 @@ public class SearchPageController {
     @FXML
     void BinarySearchButtonPressed(ActionEvent event) {
 
+        for(int i=1; i<arraySize; i++){
+            if(array[i]<array[i-1]){
+                msg.setText("Array is not Sorted");
+                return;
+            }
+        }
         binaryRecursion(0,arraySize);
     }
 
@@ -73,6 +151,7 @@ public class SearchPageController {
         KeyFrame bfsKeyFrame = new KeyFrame(Duration.seconds(1), e->{
 
             int m=(l+r)/2;
+            System.out.println(array[m] + " " + searchElement);
             if(m<arraySize && array[m]==searchElement){
                 searchNodeList.get(m).getNode().setFill(Color.BLUE);
                 visualizer.stop();
@@ -126,6 +205,7 @@ public class SearchPageController {
     void SearchElementPressed(ActionEvent event) {
         String s = SearchElement.getText();
         searchElement = Integer.parseInt(s);
+        System.out.println(searchElement);
     }
 
     @FXML
@@ -134,8 +214,6 @@ public class SearchPageController {
         arraySize = Integer.parseInt(s);
     }
 
-    public int arraySize = 5;
-    public int array[] = {1, 2, 3, 4, 5};
-    public int searchElement = 4;
+
 
 }

@@ -31,13 +31,14 @@ public class MenuPageController {
     @FXML private Button SearchButton;
 
 
+
     @FXML
     void SearchButtonPressed(ActionEvent event) throws IOException {
         Stage primaryStage = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("SearchPage.fxml"));
         primaryStage.setTitle("AlgoVisualizer");
         primaryStage.setScene(new Scene(root));
-        //primaryStage.initStyle(StageStyle.UNDECORATED);
+        primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setMaximized(true);
         primaryStage.setResizable(false);
         primaryStage.show();

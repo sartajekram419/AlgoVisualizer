@@ -32,12 +32,12 @@ public class SelectionSort extends AbstractSort {
         int minIdx;
         for (int i = 0; i < nodes.length - 1; i++) {
             minIdx = i;
-            transitions.add(colorNode(nodes, NEWMIN_COLOR, minIdx));
+            transitions.add(colorNode(nodes, SELECT_COLOR, minIdx));
             for (int j = i+1; j < nodes.length; j++) {
-                transitions.add(colorNode(nodes, SELECT_COLOR, j));
+                transitions.add(colorNode(nodes, START_COLOR, j));
                 if (nodes[j].getValue() < nodes[minIdx].getValue()) {
-                    if (minIdx == i) transitions.add(ColorNode(nodes, minIdx, j, MIN_COLOR, NEWMIN_COLOR));
-                    else transitions.add(ColorNode(nodes, minIdx, j, Color.CRIMSON, NEWMIN_COLOR));
+                    if (minIdx == i) transitions.add(ColorNode(nodes, minIdx, j, SELECT_COLOR, START_COLOR));
+                    else transitions.add(ColorNode(nodes, minIdx, j, START_COLOR, SELECT_COLOR));
                     minIdx = j;
                 }
                 else transitions.add(colorNode(nodes, START_COLOR, j));
