@@ -1,0 +1,15 @@
+#SortingPage{
+
+    -fx-background-image: url("StartingPage.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover,auto;
+
+}
+
+#LowerPane00{
+    -fx-background-color: linear-gradient(to top, #071011, #051013, #040f15, #050e17, #090d18, #1a1e28, #292d39, #383e4b, #596774, #7e949e, #a7c3c7, #d5f3f1);
+}
+
+#LowerPane{
+    -fx-background-color: gray;
+}

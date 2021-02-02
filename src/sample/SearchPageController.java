@@ -43,10 +43,14 @@ public class SearchPageController {
     @FXML
     private Pane MovingElement;
 
+
     @FXML
     void OkButtonPressed(ActionEvent event) {
 
+
+        //searchNodeList.removeAll(searchNodeList);
         searchNodeList = new ArrayList<>();
+        System.out.println(searchNodeList.size());
 
         for(int i=0;i<arraySize;i++){
             searchNodeList.add(new SearchNode(ArrayHolder,array[i],i));
