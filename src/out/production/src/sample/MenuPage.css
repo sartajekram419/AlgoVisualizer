@@ -1,0 +1,7 @@
+#MenuPage{
+
+    -fx-background-image: url("MenuPage.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover,auto;
+
+}
