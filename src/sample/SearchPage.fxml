@@ -10,11 +10,11 @@
    <children>
       <AnchorPane fx:id="SideBar" layoutX="3.0" layoutY="-2.0" prefHeight="557.0" prefWidth="319.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button fx:id="CodeButton" layoutX="62.0" layoutY="635.0" mnemonicParsing="false" onAction="#CodeButtonPressed" text="Source Code" AnchorPane.bottomAnchor="49.0" />
+            <Button fx:id="CodeButton" layoutX="62.0" layoutY="618.0" mnemonicParsing="false" onAction="#CodeButtonPressed" text="Source Code" AnchorPane.bottomAnchor="21.399999999999977" />
             <Button fx:id="ClearButton" layoutX="62.0" layoutY="564.0" mnemonicParsing="false" onAction="#ClearButtonPressed" prefHeight="51.0" text="Clear all" />
             <Button fx:id="LinearSearchButton" layoutX="62.0" layoutY="494.0" mnemonicParsing="false" onAction="#LinearSearchButton" text="Linear Search" />
             <Button fx:id="BinarySearchButton" layoutX="62.0" layoutY="423.0" mnemonicParsing="false" onAction="#BinarySearchButtonPressed" text="Binary Search" />
-            <Button fx:id="BackButton" layoutX="62.0" layoutY="49.0" mnemonicParsing="false" onAction="#BackButtonPressed" text="&lt;&lt; Back" AnchorPane.topAnchor="49.0" />
+            <Button fx:id="BackButton" layoutX="62.0" layoutY="49.0" mnemonicParsing="false" onAction="#BackButtonPressed" prefHeight="51.0" stylesheets="@SearchPage.css" text="&lt;&lt; Back" AnchorPane.topAnchor="49.0" />
             <Button fx:id="Ok" layoutX="62.0" layoutY="268.0" mnemonicParsing="false" onAction="#OkButtonPressed" text="Random Input" />
             <TextField fx:id="SearchElement" alignment="CENTER" layoutX="62.0" layoutY="353.0" onAction="#SearchElementPressed" prefHeight="26.0" prefWidth="135.0" promptText="Search Value" />
             <Button fx:id="InputButton" layoutX="62.0" layoutY="195.0" mnemonicParsing="false" onAction="#InputButtonPressed" text="Custom Input" />

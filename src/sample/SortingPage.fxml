@@ -17,6 +17,6 @@
       <Button fx:id="CustomButton" layoutX="492.0" layoutY="25.0" mnemonicParsing="false" onAction="#CustomButtonAction" prefHeight="38.0" prefWidth="102.0" text="Custom" AnchorPane.topAnchor="25.0" />
       <Button fx:id="BackButton" layoutX="89.0" layoutY="79.0" mnemonicParsing="false" onAction="#BackButtonPressed" prefHeight="38.0" prefWidth="102.0" text="&lt;&lt; Back" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="25.0" />
       <Button fx:id="sortButton" alignment="CENTER" contentDisplay="CENTER" layoutX="895.0" layoutY="25.0" mnemonicParsing="false" onAction="#sortButtonAction" prefHeight="38.0" prefWidth="102.0" text="Start" />
-      <Button fx:id="SourceButton" layoutX="1135.0" layoutY="25.0" mnemonicParsing="false" onAction="#SourceButtonPressed" prefHeight="38.0" prefWidth="102.0" text="Source Code" />
+      <Button fx:id="SourceButton" layoutX="1161.0" layoutY="25.0" mnemonicParsing="false" onAction="#SourceButtonPressed" prefHeight="38.0" prefWidth="102.0" text="Source Code" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="25.0" />
     </children>
 </AnchorPane>
