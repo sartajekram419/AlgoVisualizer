@@ -1,0 +1,137 @@
+#MenuPage{
+
+    -fx-background-image: url("MenuPage.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover,auto;
+
+}
+
+
+#SideBar{
+    -fx-background-color: White;
+}
+
+
+/*
+#ClearButton {
+    -fx-background-color: #151019;
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-pref-width: 195px;
+    -fx-border-radius: 20px;
+    -fx-border-width: 1px;
+}
+
+#ClearButton:hover {
+    -fx-background-color: #ff0000;
+    -fx-text-fill: white;
+
+}
+*/
+
+ .button
+{
+    -fx-background-color: #151019;
+    -fx-text-fill: white;
+    -fx-border-color: lightblue;
+    -fx-border-width: 1px;
+    -fx-font-size: 24px;
+     -fx-pref-width: 195px;
+}
+
+.button:hover
+{
+    -fx-background-color: #151019;
+    -fx-text-fill: #34cceb;
+    -fx-border-color: #34cceb;
+    -fx-border-width: 1px;
+}
+/*
+#LinearSearchButton {
+    -fx-background-color: #151019;
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-pref-width: 195px;
+}
+
+#LinearSearchButton:hover {
+    -fx-background-color: #ff0000;
+    -fx-text-fill: white;
+
+}
+
+
+
+#BinarySearchButton {
+    -fx-background-color: #151019;
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-pref-width: 195px;
+}
+*/
+#Size {
+    -fx-background-color: #151019;
+    -fx-text-fill: white;
+    -fx-border-color: lightblue;
+    -fx-border-width: 1px;
+    -fx-font-size: 24px;
+     -fx-pref-width: 195px;
+}
+
+#Size:hover
+{
+    -fx-background-color: #151019;
+    -fx-text-fill: #34cceb;
+    -fx-border-color: #34cceb;
+    -fx-border-width: 1px;
+}
+
+#SearchElement{
+   -fx-background-color: #151019;
+    -fx-text-fill: white;
+    -fx-border-color: lightblue;
+    -fx-border-width: 1px;
+    -fx-font-size: 24px;
+     -fx-pref-width: 195px;
+}
+#SearchElement:hover
+{
+    -fx-background-color: #151019;
+    -fx-text-fill: #34cceb;
+    -fx-border-color: #34cceb;
+    -fx-border-width: 1px;
+}
+/*
+#Ok{
+    -fx-background-color: #151019;
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-pref-width: 195px;
+}
+
+#BackButton{
+    -fx-background-color: #151019;
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-pref-width: 195px;
+}
+
+#CodeButton{
+    -fx-background-color: #151019;
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-pref-width: 195px;
+}
+
+#InputButton{
+    -fx-background-color: #151019;
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-pref-width: 195px;
+}
+*/
+#msg{
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+
+}

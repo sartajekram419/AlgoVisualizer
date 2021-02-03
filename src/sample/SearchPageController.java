@@ -290,7 +290,7 @@ public class SearchPageController {
                 linearRecursion(i+1,n);
             }
             else if(i<arraySize){
-                searchNodeList.get(i).getNode().setFill(Color.BLUE);
+                searchNodeList.get(i).getNode().setFill(Color.GREENYELLOW);
                 visualizer.stop();
                 msg.setText("Element Found");
             }

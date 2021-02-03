@@ -1,0 +1,61 @@
+#MenuPage{
+
+    -fx-background-image: url("MenuPage.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover,auto;
+
+}
+
+#InsertionSortButton {
+   background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+}
+
+#SearchPane{
+
+    -fx-background-image: url("SearchPane.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 350px 350px;
+
+}
+
+#SortPane{
+
+    -fx-background-image: url("SortPane.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 350px 350px;
+
+}
+
+#GraphPane{
+
+    -fx-background-image: url("GraphPane.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 350px 350px;
+
+}
+
+.button
+{
+    -fx-background-color: #151019;
+    -fx-text-fill: white;
+    -fx-border-color: lightblue;
+    -fx-border-width: 1px;
+    -fx-border-radius: 30px;
+}
+
+.button:hover
+{
+    -fx-background-color: #151019;
+    -fx-text-fill: #34cceb;
+    -fx-border-color: #34cceb;
+    -fx-border-width: 1px;
+    -fx-border-radius: 30px;
+}

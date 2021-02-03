@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="SortingPage" prefHeight="460.0" prefWidth="1328.0" stylesheets="@SortingPage.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SortingPageController">
+    <children>
+        <Pane fx:id="SortingPagePane" prefHeight="334.0" prefWidth="800.0" rotate="180.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="250.0" />
+      <Button fx:id="randomButton" layoutX="371.0" layoutY="25.0" mnemonicParsing="false" onAction="#randomButtonAction" prefHeight="38.0" prefWidth="102.0" text="Shuffle" AnchorPane.topAnchor="25.0" />
+      <ChoiceBox fx:id="chooseBox" layoutX="734.0" layoutY="25.0" prefHeight="38.0" prefWidth="142.0" AnchorPane.topAnchor="25.0" />
+      <ChoiceBox fx:id="speedBox" layoutX="613.0" layoutY="25.0" prefHeight="38.0" prefWidth="102.0" AnchorPane.topAnchor="25.0" />
+      <Button fx:id="pauseButton" layoutX="1016.0" layoutY="25.0" mnemonicParsing="false" onAction="#pauseButtonAction" prefHeight="38.0" prefWidth="102.0" text="Pause" AnchorPane.topAnchor="25.0" />
+      <TextField fx:id="ElementCountButton" layoutX="82.0" layoutY="23.0" onAction="#ElementCountButton" prefHeight="38.0" prefWidth="102.0" promptText="No. of Elements" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="25.0" />
+      <Button fx:id="CustomButton" layoutX="492.0" layoutY="25.0" mnemonicParsing="false" onAction="#CustomButtonAction" prefHeight="38.0" prefWidth="102.0" text="Custom" AnchorPane.topAnchor="25.0" />
+      <Button fx:id="BackButton" layoutX="89.0" layoutY="79.0" mnemonicParsing="false" onAction="#BackButtonPressed" prefHeight="38.0" prefWidth="102.0" text="&lt;&lt; Back" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="25.0" />
+      <Button fx:id="sortButton" alignment="CENTER" contentDisplay="CENTER" layoutX="895.0" layoutY="25.0" mnemonicParsing="false" onAction="#sortButtonAction" prefHeight="38.0" prefWidth="102.0" text="Start" />
+      <Button fx:id="SourceButton" layoutX="1161.0" layoutY="25.0" mnemonicParsing="false" onAction="#SourceButtonPressed" prefHeight="38.0" prefWidth="102.0" text="Source Code" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="25.0" />
+    </children>
+</AnchorPane>

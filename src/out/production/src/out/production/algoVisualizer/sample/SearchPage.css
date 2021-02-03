@@ -1,0 +1,83 @@
+#MenuPage{
+
+    -fx-background-image: url("MenuPage.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover,auto;
+
+}
+
+
+#SideBar{
+    -fx-background-color: White;
+}
+
+
+
+#ClearButton {
+    -fx-background-color: #151019;
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-pref-width: 195px;
+}
+
+#LinearSearchButton {
+    -fx-background-color: #151019;
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-pref-width: 195px;
+}
+
+#BinarySearchButton {
+    -fx-background-color: #151019;
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-pref-width: 195px;
+}
+
+#Size {
+    -fx-background-color: #151019;
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-pref-width: 195px;
+}
+
+#SearchElement{
+    -fx-background-color: #151019;
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-pref-width: 195px;
+}
+
+#Ok{
+    -fx-background-color: #151019;
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-pref-width: 195px;
+}
+
+#BackButton{
+    -fx-background-color: #151019;
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-pref-width: 195px;
+}
+
+#CodeButton{
+    -fx-background-color: #151019;
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-pref-width: 195px;
+}
+
+#InputButton{
+    -fx-background-color: #151019;
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-pref-width: 195px;
+}
+
+#msg{
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+
+}
