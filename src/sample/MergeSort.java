@@ -8,6 +8,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+
+/**
+ * This class does merge sort
+ *
+ * @author Nifty_180041219
+ *
+ */
+
 public class MergeSort extends AbstractSort {
 
     private ArrayList<Transition> transitions;

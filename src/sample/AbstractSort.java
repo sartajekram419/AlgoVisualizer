@@ -10,7 +10,12 @@ import javafx.util.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * This is an abstract class for all the sorting class
+ *
+ * @author Sartaj_180041204
+ *
+ */
 public abstract class AbstractSort {
     public final Color START_COLOR = Color.WHITE;
     public final Color SELECT_COLOR = Color.web("0xf4511e",1.0);
@@ -26,6 +31,13 @@ public abstract class AbstractSort {
         X = SortingPageController.WINDOW_WIDTH / SortingPageController.NO_OF_NODES;
     }
 
+
+    /**
+     * Changes the color of the nodes and prints those with animation
+     *
+     * @author Sartaj_180041204
+     *
+     */
     void fillTransion(Node c, Color color) {
         f = new FillTransition();
         f.setShape((Shape) c);
@@ -34,6 +46,12 @@ public abstract class AbstractSort {
         p.getChildren().add(f);
     }
 
+    /**
+     * Colors all the nodes
+     *
+     * @author Sartaj_180041204
+     *
+     */
     ParallelTransition colorNode(Node[] arr, Color color, int...a) {
         p = new ParallelTransition();
         for (int i = 0; i < a.length; i++) {
@@ -42,6 +60,12 @@ public abstract class AbstractSort {
         return p;
     }
 
+    /**
+     * Colors all the nodes
+     *
+     * @author Sartaj_180041204
+     *
+     */
     ParallelTransition colorNode(List<Node> list, Color color) {
         p = new ParallelTransition();
         for (Node c : list) {
@@ -50,6 +74,12 @@ public abstract class AbstractSort {
         return p;
     }
 
+    /**
+     * Swaps the nodes and displace them
+     *
+     * @author Sartaj_180041204
+     *
+     */
     ParallelTransition swap(Node a[], int i, int j) {
         p = new ParallelTransition();
         int dx = j-i;

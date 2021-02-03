@@ -6,6 +6,12 @@ import javafx.scene.paint.Color;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * This class does quick sort
+ *
+ * @author Nifty_180041219
+ *
+ */
 
 public class QuickSort extends AbstractSort {
     private static final Color PIVOT_COLOR = Color.web("0xf4511e",1.0);

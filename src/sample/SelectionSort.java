@@ -8,6 +8,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 
+/**
+ * This class does selection sort
+ *
+ * @author Sartaj_180041204
+ *
+ */
 
 public class SelectionSort extends AbstractSort {
 

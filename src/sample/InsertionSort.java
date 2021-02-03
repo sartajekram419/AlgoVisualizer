@@ -6,6 +6,12 @@ import javafx.animation.Transition;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * This class does insertion sort
+ *
+ * @author Sajid_180041203
+ *
+ */
 
 
 public class InsertionSort extends AbstractSort {

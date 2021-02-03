@@ -50,6 +50,15 @@ public class SortingPageController implements Initializable {
     @FXML private Button BackButton;
     @FXML private Button SourceButton;
 
+
+
+    /**
+     * This method launches the source code window for sorting
+     *
+     * @author Sajid_180041203
+     *
+     * @param actionEvent Indicates if a component defined action occurred
+     */
     @FXML
     void SourceButtonPressed(ActionEvent event) throws IOException {
         Stage primaryStage = new Stage();
@@ -86,6 +95,13 @@ public class SortingPageController implements Initializable {
     public static AbstractSort abstractSort;
 
 
+    /**
+     * This method sends back to Menu Page
+     *
+     * @author Sajid_180041203
+     *
+     * @param actionEvent Indicates if a component defined action occurred
+     */
     @FXML
     void BackButtonPressed(ActionEvent event) throws IOException {
         Stage primaryStage = new Stage();
@@ -101,7 +117,13 @@ public class SortingPageController implements Initializable {
     }
 
 
-
+    /**
+     * This method launches Window for customized input
+     *
+     * @author Sajid_180041203
+     *
+     * @param actionEvent Indicates if a component defined action occurred
+     */
     @FXML
     void CustomButtonAction(ActionEvent event) throws IOException {
 
@@ -122,7 +144,13 @@ public class SortingPageController implements Initializable {
     }
 
 
-
+    /**
+     * This method sets the value for # of nodes
+     *
+     * @author Sajid_180041203
+     *
+     * @param actionEvent Indicates if a component defined action occurred
+     */
     @FXML
     void ElementCountButton(ActionEvent event) {
 
@@ -135,11 +163,25 @@ public class SortingPageController implements Initializable {
         //System.out.println(NO_OF_NODES);
     }
 
+    /**
+     * This method creates randomized array
+     *
+     * @author Nifty_180041219
+     *
+     * @param actionEvent Indicates if a component defined action occurred
+     */
     @FXML
     void randomButtonAction(ActionEvent event) {
         randomGenerator(NO_OF_NODES);
     }
 
+    /**
+     * This method pauses the sorting
+     *
+     * @author Nifty_180041219
+     *
+     * @param actionEvent Indicates if a component defined action occurred
+     */
     @FXML
     void pauseButtonAction(ActionEvent event) {
         if (running) {
@@ -154,6 +196,13 @@ public class SortingPageController implements Initializable {
         }
     }
 
+    /**
+     * This method starts the sorting
+     *
+     * @author Nifty_180041219
+     *
+     * @param actionEvent Indicates if a component defined action occurred
+     */
     @FXML
     void sortButtonAction(ActionEvent event) {
         running = true;
@@ -172,7 +221,13 @@ public class SortingPageController implements Initializable {
         st.play();
     }
 
-
+    /**
+     * This method generates random array and displays the nodes
+     *
+     * @author Nifty_180041219
+     *
+     * @param val # of nodes
+     */
     public void randomGenerator(int val) {
         sortButton.setDisable(false);
         SortingPagePane.getChildren().clear();
@@ -180,6 +235,14 @@ public class SortingPageController implements Initializable {
         SortingPagePane.getChildren().addAll(Arrays.asList(nodes));
     }
 
+    /**
+     * This method displays the customized nodes
+     *
+     * @author Nifty_180041219
+     *
+     * @param val # of nodes
+     * @param arr customized array
+     */
     public void CustomGenerator(int val, int[] arr) {
         sortButton.setDisable(false);
         SortingPagePane.getChildren().clear();

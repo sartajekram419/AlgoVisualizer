@@ -6,6 +6,13 @@ import java.util.Random;
 import javafx.scene.effect.Glow;
 import javafx.scene.paint.Color;
 
+
+/**
+ * This class generates randomized nodes
+ *
+ * @author Nifty_180041219
+ *
+ */
 public class GenerateRandomNodes {
     public GenerateRandomNodes(){};
 

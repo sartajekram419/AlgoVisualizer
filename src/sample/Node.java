@@ -15,7 +15,6 @@ import java.util.List;
  * @author Sajid_180041203
  *
  */
-
 public class Node extends Rectangle {
     private int val;
 

@@ -3,8 +3,12 @@ package sample;
 
 import javafx.scene.paint.Color;
 
-
-
+/**
+ * This class generates randomized nodes
+ *
+ * @author Sajid_180041203
+ *
+ */
 public class GenerateCustomNodes {
     public GenerateCustomNodes(){};
 

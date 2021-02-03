@@ -4,6 +4,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import javafx.animation.Transition;
 
+
+/**
+ * This class does bubble sort
+ *
+ * @author Sajid_180041203
+ *
+ */
+
 public class BubbleSort extends AbstractSort {
     private ArrayList<Transition> transitions;
     private boolean f;
