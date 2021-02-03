@@ -7,9 +7,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="javafx-swt" level="project" />
     <orderEntry type="library" name="Nifty" level="project" />
-    <orderEntry type="library" name="javafx-swt1" level="project" />
     <orderEntry type="library" name="io.github.typhon0:AnimateFX:1.2.1" level="project" />
+    <orderEntry type="library" name="JavaFX" level="project" />
   </component>
 </module>

@@ -22,6 +22,15 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
+
+
+/**
+ * This class controls the customized input for searching
+ *
+ * @author Sajid_180041203
+ * @author Nifty_180041219
+ */
+
 public class SearchPageController {
 
     private ArrayList<SearchNode> searchNodeList;
@@ -73,6 +82,14 @@ public class SearchPageController {
     @FXML
     private Button CodeButton;
 
+
+    /**
+     * This method facilitates the customized input
+     *
+     * @author Sajid_180041203
+     *
+     * @param actionEvent Indicates if a component defined action occurred
+     */
     @FXML
     void InputButtonPressed(ActionEvent event) throws IOException {
         Stage primaryStage = new Stage();
@@ -95,6 +112,14 @@ public class SearchPageController {
         }
     }
 
+
+    /**
+     * This method clears the search page
+     *
+     * @author Nifty_180041219
+     *
+     * @param actionEvent Indicates if a component defined action occurred
+     */
     @FXML
     void ClearButtonPressed(ActionEvent event) throws IOException {
         Stage primaryStage = new Stage();
@@ -109,6 +134,13 @@ public class SearchPageController {
         ClearButton.getScene().getWindow().hide();
     }
 
+    /**
+     * This method sends back to the menu page
+     *
+     * @author Sajid_180041203
+     *
+     * @param actionEvent Indicates if a component defined action occurred
+     */
     @FXML
     void BackButtonPressed(ActionEvent event) throws IOException {
         Stage primaryStage = new Stage();
@@ -123,6 +155,13 @@ public class SearchPageController {
         BackButton.getScene().getWindow().hide();
     }
 
+    /**
+     * This method launches the source code page
+     *
+     * @author Sajid_180041203
+     *
+     * @param actionEvent Indicates if a component defined action occurred
+     */
     @FXML
     void CodeButtonPressed(ActionEvent event) throws IOException {
         Stage primaryStage = new Stage();
@@ -135,6 +174,13 @@ public class SearchPageController {
         primaryStage.showAndWait();
     }
 
+    /**
+     * This method generates random search nodes
+     *
+     * @author Nifty_180041219
+     *
+     * @param actionEvent Indicates if a component defined action occurred
+     */
 
     @FXML
     void OkButtonPressed(ActionEvent event) {
@@ -155,6 +201,13 @@ public class SearchPageController {
 
     }
 
+    /**
+     * This method launches the binary search method
+     *
+     * @author Sajid_180041203
+     *
+     * @param actionEvent Indicates if a component defined action occurred
+     */
     @FXML
     void BinarySearchButtonPressed(ActionEvent event) {
 
@@ -167,6 +220,13 @@ public class SearchPageController {
         binaryRecursion(0,arraySize);
     }
 
+    /**
+     * This method launches the binary search method
+     *
+     * @author Nifty_180041219
+     *
+     * @param actionEvent Indicates if a component defined action occurred
+     */
     @FXML
     void LinearSearchButton(ActionEvent event) throws InterruptedException {
 
@@ -175,12 +235,20 @@ public class SearchPageController {
 
     }
 
+    /**
+     * This method runs binary search and controls animation
+     *
+     * @author Sajid_180041203
+     *
+     * @param l lower bound
+     * @param r upper bound
+     */
     void binaryRecursion(int l, int r){
         KeyFrame bfsKeyFrame = new KeyFrame(Duration.seconds(1), e->{
 
             int m=(l+r)/2;
             if(m<arraySize && array[m]==searchElement){
-                searchNodeList.get(m).getNode().setFill(Color.BLUE);
+                searchNodeList.get(m).getNode().setFill(Color.GREENYELLOW);
                 visualizer.stop();
                 msg.setText("Element Found");
             }
@@ -193,7 +261,7 @@ public class SearchPageController {
                 binaryRecursion(m+1,r);
             }
             else if(l<r){
-                searchNodeList.get(m).getNode().setFill(Color.BLUE);
+                searchNodeList.get(m).getNode().setFill(Color.GREENYELLOW);
                 visualizer.stop();
                 msg.setText("Element Found");
             }
@@ -207,6 +275,14 @@ public class SearchPageController {
         visualizer.play();
     }
 
+    /**
+     * This method runs linear search and controls animation
+     *
+     * @author Nifty_180041219
+     *
+     * @param i current element
+     * @param n # of total elements
+     */
     void linearRecursion(int i, int n){
         KeyFrame bfsKeyFrame = new KeyFrame(Duration.seconds(1), e->{
             if(i<arraySize && array[i]!=searchElement){
@@ -228,12 +304,26 @@ public class SearchPageController {
         visualizer.play();
     }
 
+    /**
+     * This method sets the value of Search Element
+     *
+     * @author Nifty_180041219
+     *
+     * @param actionEvent Indicates if a component defined action occurred
+     */
     @FXML
     void SearchElementPressed(ActionEvent event) {
         String s = SearchElement.getText();
         searchElement = Integer.parseInt(s);
     }
 
+    /**
+     * This method sets the size of array
+     *
+     * @author Nifty_180041219
+     *
+     * @param actionEvent Indicates if a component defined action occurred
+     */
     @FXML
     void SizePressed(ActionEvent event) {
         String s = Size.getText();

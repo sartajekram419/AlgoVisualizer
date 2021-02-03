@@ -21,12 +21,19 @@ import javafx.util.StringConverter;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
 
+
+/**
+ * This class controls the sort page
+ *
+ * @author Nifty_180041219
+ * @author Sajid_180041203
+ *
+ */
 
 public class SortingPageController implements Initializable {
 
@@ -55,10 +62,6 @@ public class SortingPageController implements Initializable {
         primaryStage.showAndWait();
     }
 
-
-
-
-    Connection connection;
     SequentialTransition st;
     boolean running = false;
 
@@ -186,8 +189,7 @@ public class SortingPageController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        //try { connection = DriverManager.getConnection("jdbc:derby://localhost:1527/myDatabase", "app", "app"); }
-        //catch(SQLException e) { }
+
 
         pauseButton.setDisable(true);
 

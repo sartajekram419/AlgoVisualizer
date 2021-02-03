@@ -6,6 +6,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 
+
+/**
+ * This class includes the source code for graph traversal
+ *
+ * @author Nifty_180041219
+ */
 public class GraphSourceCodeWindowController {
 
     @FXML

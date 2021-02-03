@@ -8,6 +8,14 @@ import javafx.util.Duration;
 import java.util.List;
 
 
+/**
+ * This method sets the value of Search Element
+ *
+ * @author Nifty_180041219
+ * @author Sajid_180041203
+ *
+ */
+
 public class Node extends Rectangle {
     private int val;
 

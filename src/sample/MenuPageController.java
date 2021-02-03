@@ -23,6 +23,15 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
+
+/**
+ * This class controls the Menu Page
+ *
+ * @author Sajid_180041203
+ * @author Nifty_180041219
+ * @author Sartaj_180041204
+ *
+ */
 public class MenuPageController {
 
     @FXML private AnchorPane MenuPage;
@@ -31,7 +40,13 @@ public class MenuPageController {
     @FXML private Button SearchButton;
 
 
-
+    /**
+     * This method launches the Search Page when Searching Button is clicked
+     *
+     * @author Sajid_180041203
+     *
+     * @param actionEvent Indicates if a component defined action occurred
+     */
     @FXML
     void SearchButtonPressed(ActionEvent event) throws IOException {
         Stage primaryStage = new Stage();
@@ -46,8 +61,13 @@ public class MenuPageController {
         InsertionSortButton.getScene().getWindow().hide();
     }
 
-
-
+    /**
+     * This method launches the Sorting Page when Sorting Button is clicked
+     *
+     * @author Nifty_180041219
+     *
+     * @param actionEvent Indicates if a component defined action occurred
+     */
     @FXML
     void InsertionSortButtonPressed(ActionEvent event) throws IOException {
         Stage primaryStage = new Stage();
@@ -73,6 +93,16 @@ public class MenuPageController {
 
     DoubleProperty nodeRadius;
 
+
+    /**
+     * This method launches the Graph Traversal Page when Graph Traversal Button is clicked
+     *
+     * @author Sajid_180041203
+     * @author Nifty_180041219
+     * @author Sartaj_180041204
+     *
+     * @param actionEvent Indicates if a component defined action occurred
+     */
     @FXML
     void GraphTraversalButtonPressed(ActionEvent event) throws IOException{
 
@@ -193,11 +223,31 @@ public class MenuPageController {
         GraphTraversal.getScene().getWindow().hide();
     }
 
+    /**
+     * This method takes the coordinates of the node and calls a different add_node method
+     *
+     * @author Sajid_180041203
+     *
+     * @param x defines the X-coordinate of the node
+     * @param y defines the Y-coordinate of the node
+     */
     void addNode(double x, double y){
         addNode(x, y, nodeRadius.doubleValue());
         //System.out.println(graph);
     }
 
+
+    /**
+     * This method calls the add_edge method or selects a node depending on specific conditions
+     *
+     * @author Sajid_180041203
+     * @author Nifty_180041219
+     * @author Sartaj_180041204
+     *
+     * @param x defines the X-coordinate of the node
+     * @param y defines the Y-coordinate of the node
+     * @param radius defines the radius of the node
+     */
     void addNode(double x, double y, double radius){
         graph.addNode(x,y,radius);
         GraphNode graphNode = graph.getNode(graph.size()-1);
@@ -216,7 +266,14 @@ public class MenuPageController {
 
 
 
+    /**
+     * This method calls a method to add unidirectional edge between two nodes
 
+     * @author Sartaj_180041204
+     *
+     * @param u first node
+     * @param v second node
+     */
     void addEdge(int u, int v){
         graph.addUndirectedEdge(u,v);
     }

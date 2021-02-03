@@ -9,6 +9,12 @@ import javafx.scene.control.TextArea;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+
+/**
+ * This class controls customized input for sorting
+ *
+ * @author Sajid_180041203
+ */
 public class CustomInputPageController implements Initializable {
 
     @FXML private Button OkButton;

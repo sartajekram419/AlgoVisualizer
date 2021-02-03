@@ -3,9 +3,16 @@ package sample;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Line;
 
+/**
+ * This class sets the adjacent nodes
+ *
+ * @author Sartaj_180041204
+ *
+ */
 public class AdjacentNode {
     private GraphNode adjGraphNode;
     private Line edge;
+
 
     public AdjacentNode(GraphNode adjGraphNode){
         this.adjGraphNode = adjGraphNode;

@@ -10,6 +10,12 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
+/**
+ * This method controls the animation for BFS and DFS
+ *
+ * @author Sartaj_180041204
+ *
+ */
 public class AlgoVisualizer {
     private Graph graph;
     boolean visited[];
@@ -21,6 +27,13 @@ public class AlgoVisualizer {
         graph = g;
     }
 
+    /**
+     * This method runs BFS and controls animation
+     *
+     * @author Sartaj_180041204
+     *
+     * @param startNode source node
+     */
     public void runBFS(int startNode){
         queue = new LinkedList<>();
         visited = new boolean[graph.size()];
@@ -30,7 +43,7 @@ public class AlgoVisualizer {
         visited[startNode] = true;
         graph.getNode(startNode).getNode().setFill(Color.ORANGE);
 
-        KeyFrame bfsKeyFrame = new KeyFrame(Duration.seconds(1), e->{
+        KeyFrame bfsKeyFrame = new KeyFrame(Duration.seconds(1.5), e->{
             if(queue.size()>1){
                 graph.getNode(queue.poll()).getNode().setStrokeWidth(0);
                 int currentNode = queue.peek();
@@ -56,6 +69,13 @@ public class AlgoVisualizer {
         visualizer.play();
     }
 
+    /**
+     * This method runs DFS and controls animation
+     *
+     * @author Sartaj_180041204
+     *
+     * @param startNode source node
+     */
     public void runDFS(int startNode){
         stack = new Stack<>();
         visited = new boolean[graph.size()];

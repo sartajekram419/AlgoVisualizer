@@ -6,6 +6,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 
+/**
+ * This class controls the source code for sorting
+ *
+ * @author Nifty_180041219
+ *
+ */
+
 public class SourceCodeWindowController {
 
     @FXML

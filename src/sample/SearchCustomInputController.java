@@ -9,6 +9,12 @@ import javafx.scene.control.TextArea;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+
+/**
+ * This class controls the customized input for searching
+ *
+ * @author Sajid_180041203
+ */
 public class SearchCustomInputController implements Initializable {
 
     @FXML

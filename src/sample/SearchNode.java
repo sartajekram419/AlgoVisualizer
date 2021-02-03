@@ -7,6 +7,13 @@ import javafx.scene.shape.Circle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
+
+/**
+ * This class controls the customized input for searching
+ *
+ * @author Sajid_180041203
+ * @author Nifty_180041219
+ */
 public class SearchNode {
 
     private int nodeID;

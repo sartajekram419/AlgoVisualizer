@@ -16,7 +16,11 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-
+/**
+ * This is a class controlling the starting page
+ *
+ * @author Sartaj_180041204
+ */
 public class StartingPageController implements Initializable {
 
     @FXML private AnchorPane StartingPage;
@@ -24,6 +28,13 @@ public class StartingPageController implements Initializable {
     @FXML private Button button;
     @FXML private Label EnterKeyLabel;
 
+    /**
+     * This method launches the Menu Page when Enter Button is pressed
+     *
+     * @author Sartaj_180041204
+     *
+     * @param actionEvent Indicates if a component defined action occurred
+     */
     @FXML
     void buttonPressed(ActionEvent event) throws IOException {
 
@@ -39,6 +50,11 @@ public class StartingPageController implements Initializable {
         button.getScene().getWindow().hide();
     }
 
+    /**
+     * This method adds animation to the title
+     *
+     * @author Sartaj_180041204
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         new BounceIn(TitleLabel).play();
