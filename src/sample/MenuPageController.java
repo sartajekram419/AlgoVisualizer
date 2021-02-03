@@ -45,7 +45,7 @@ public class MenuPageController {
      *
      * @author Sajid_180041203
      *
-     * @param actionEvent Indicates if a component defined action occurred
+     * @param event Indicates if a component defined action occurred
      */
     @FXML
     void SearchButtonPressed(ActionEvent event) throws IOException {
@@ -66,7 +66,7 @@ public class MenuPageController {
      *
      * @author Nifty_180041219
      *
-     * @param actionEvent Indicates if a component defined action occurred
+     * @param event Indicates if a component defined action occurred
      */
     @FXML
     void InsertionSortButtonPressed(ActionEvent event) throws IOException {
@@ -101,7 +101,7 @@ public class MenuPageController {
      * @author Nifty_180041219
      * @author Sartaj_180041204
      *
-     * @param actionEvent Indicates if a component defined action occurred
+     * @param event Indicates if a component defined action occurred
      */
     @FXML
     void GraphTraversalButtonPressed(ActionEvent event) throws IOException{

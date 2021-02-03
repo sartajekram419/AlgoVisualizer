@@ -33,7 +33,7 @@ public class StartingPageController implements Initializable {
      *
      * @author Sartaj_180041204
      *
-     * @param actionEvent Indicates if a component defined action occurred
+     * @param event Indicates if a component defined action occurred
      */
     @FXML
     void buttonPressed(ActionEvent event) throws IOException {

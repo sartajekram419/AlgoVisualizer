@@ -88,7 +88,7 @@ public class SearchPageController {
      *
      * @author Sajid_180041203
      *
-     * @param actionEvent Indicates if a component defined action occurred
+     * @param event Indicates if a component defined action occurred
      */
     @FXML
     void InputButtonPressed(ActionEvent event) throws IOException {
@@ -118,7 +118,7 @@ public class SearchPageController {
      *
      * @author Nifty_180041219
      *
-     * @param actionEvent Indicates if a component defined action occurred
+     * @param event Indicates if a component defined action occurred
      */
     @FXML
     void ClearButtonPressed(ActionEvent event) throws IOException {
@@ -139,7 +139,7 @@ public class SearchPageController {
      *
      * @author Sajid_180041203
      *
-     * @param actionEvent Indicates if a component defined action occurred
+     * @param event Indicates if a component defined action occurred
      */
     @FXML
     void BackButtonPressed(ActionEvent event) throws IOException {
@@ -160,7 +160,7 @@ public class SearchPageController {
      *
      * @author Sajid_180041203
      *
-     * @param actionEvent Indicates if a component defined action occurred
+     * @param event Indicates if a component defined action occurred
      */
     @FXML
     void CodeButtonPressed(ActionEvent event) throws IOException {
@@ -179,7 +179,7 @@ public class SearchPageController {
      *
      * @author Nifty_180041219
      *
-     * @param actionEvent Indicates if a component defined action occurred
+     * @param event Indicates if a component defined action occurred
      */
 
     @FXML
@@ -206,7 +206,7 @@ public class SearchPageController {
      *
      * @author Sajid_180041203
      *
-     * @param actionEvent Indicates if a component defined action occurred
+     * @param event Indicates if a component defined action occurred
      */
     @FXML
     void BinarySearchButtonPressed(ActionEvent event) {
@@ -225,7 +225,7 @@ public class SearchPageController {
      *
      * @author Nifty_180041219
      *
-     * @param actionEvent Indicates if a component defined action occurred
+     * @param event Indicates if a component defined action occurred
      */
     @FXML
     void LinearSearchButton(ActionEvent event) throws InterruptedException {
@@ -309,7 +309,7 @@ public class SearchPageController {
      *
      * @author Nifty_180041219
      *
-     * @param actionEvent Indicates if a component defined action occurred
+     * @param event Indicates if a component defined action occurred
      */
     @FXML
     void SearchElementPressed(ActionEvent event) {
@@ -322,7 +322,7 @@ public class SearchPageController {
      *
      * @author Nifty_180041219
      *
-     * @param actionEvent Indicates if a component defined action occurred
+     * @param event Indicates if a component defined action occurred
      */
     @FXML
     void SizePressed(ActionEvent event) {

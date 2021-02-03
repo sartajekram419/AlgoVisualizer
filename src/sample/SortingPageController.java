@@ -57,7 +57,7 @@ public class SortingPageController implements Initializable {
      *
      * @author Sajid_180041203
      *
-     * @param actionEvent Indicates if a component defined action occurred
+     * @param event Indicates if a component defined action occurred
      */
     @FXML
     void SourceButtonPressed(ActionEvent event) throws IOException {
@@ -100,7 +100,7 @@ public class SortingPageController implements Initializable {
      *
      * @author Sajid_180041203
      *
-     * @param actionEvent Indicates if a component defined action occurred
+     * @param event Indicates if a component defined action occurred
      */
     @FXML
     void BackButtonPressed(ActionEvent event) throws IOException {
@@ -122,7 +122,7 @@ public class SortingPageController implements Initializable {
      *
      * @author Sajid_180041203
      *
-     * @param actionEvent Indicates if a component defined action occurred
+     * @param event Indicates if a component defined action occurred
      */
     @FXML
     void CustomButtonAction(ActionEvent event) throws IOException {
@@ -149,7 +149,7 @@ public class SortingPageController implements Initializable {
      *
      * @author Sajid_180041203
      *
-     * @param actionEvent Indicates if a component defined action occurred
+     * @param event Indicates if a component defined action occurred
      */
     @FXML
     void ElementCountButton(ActionEvent event) {
@@ -168,7 +168,7 @@ public class SortingPageController implements Initializable {
      *
      * @author Nifty_180041219
      *
-     * @param actionEvent Indicates if a component defined action occurred
+     * @param event Indicates if a component defined action occurred
      */
     @FXML
     void randomButtonAction(ActionEvent event) {
@@ -180,7 +180,7 @@ public class SortingPageController implements Initializable {
      *
      * @author Nifty_180041219
      *
-     * @param actionEvent Indicates if a component defined action occurred
+     * @param event Indicates if a component defined action occurred
      */
     @FXML
     void pauseButtonAction(ActionEvent event) {
@@ -201,7 +201,7 @@ public class SortingPageController implements Initializable {
      *
      * @author Nifty_180041219
      *
-     * @param actionEvent Indicates if a component defined action occurred
+     * @param event Indicates if a component defined action occurred
      */
     @FXML
     void sortButtonAction(ActionEvent event) {
