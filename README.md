@@ -11,3 +11,27 @@ AlgoVisualizer is an algorithm visualizing application made as the project for C
 * Md. Sajid Altaf- 180041203
 * Syed Mohammed Sartaj Ekram- 180041204
 * Adham Arik Rahman- 180041219
+
+
+## Demo:
+
+### Starting Page:
+
+### Menu Page:
+
+### Sorting Algorithms:
+#### Insertion Sort
+#### Selection Sort
+#### Quick Sort
+#### Bubble Sort
+#### Merge Sort
+
+### Graph Traversal:
+#### DFS
+#### BFS
+
+### Searching Algorithms:
+#### Binary Search
+#### Linear Search
+
+
