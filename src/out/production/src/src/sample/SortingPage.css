@@ -22,7 +22,7 @@
     -fx-border-width: 1px;
     -fx-border-radius: 20px;
 }
-
+/*For Hovering*/
 .button:hover
 {
     -fx-background-color: #151019;
@@ -40,7 +40,7 @@
     -fx-border-width: 1px;
     -fx-border-radius: 20px;
 }
-#ElementCountButton:hover
+#ElementCountButton:hover   /*For Hovering*/
 {
     -fx-background-color: #151019;
     -fx-text-fill: #34cceb;
@@ -58,7 +58,7 @@
     -fx-border-radius: 20px;
 }
 
-#speedBox:hover
+#speedBox:hover           /*For Hovering*/
 {
     -fx-background-color: #151019;
     -fx-text-fill: #34cceb;
@@ -75,7 +75,7 @@
     -fx-border-radius: 20px;
 }
 
-#chooseBox:hover
+#chooseBox:hover            /*For Hovering*/
 {
     -fx-background-color: #151019;
     -fx-text-fill: #34cceb;
