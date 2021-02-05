@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GraphSourceCodeWindowController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <TextArea fx:id="CodeArea" editable="false" layoutY="42.0" prefHeight="308.0" prefWidth="600.0" text="........................................................  Linear Search  .........................................................&#10;     &#10;procedure linear_search (list, value)&#10;&#10;   for each item in the list&#10;      if match item == value&#10;         return the item's location&#10;      end if&#10;   end for&#10;&#10;end procedure&#10;&#10;&#10;........................................................  Binary Search  .........................................................&#10;&#10;Procedure binary_search&#10;   A ← sorted array&#10;   n ← size of array&#10;   x ← value to be searched&#10;&#10;   Set lowerBound = 1&#10;   Set upperBound = n &#10;&#10;   while x not found&#10;      if upperBound &lt; lowerBound &#10;         EXIT: x does not exists.&#10;&#10;      set midPoint = lowerBound + ( upperBound - lowerBound ) / 2&#10;&#10;      if A[midPoint] &lt; x&#10;         set lowerBound = midPoint + 1&#10;&#10;      if A[midPoint] &gt; x&#10;         set upperBound = midPoint - 1 &#10;&#10;      if A[midPoint] = x &#10;         EXIT: x found at location midPoint&#10;   end while&#10;&#10;end procedure&#10;&#10;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0" />
+            <Button fx:id="OkButton" layoutX="269.0" layoutY="340.0" mnemonicParsing="false" onAction="#OkButtonPressed" prefHeight="18.0" prefWidth="62.0" text="Ok" AnchorPane.bottomAnchor="10.0" />
+            <Label layoutX="235.0" layoutY="14.0" text="Source Code" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

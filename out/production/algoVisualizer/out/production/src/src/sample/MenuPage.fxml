@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="MenuPage" prefHeight="400.0" prefWidth="599.0" stylesheets="@MenuPage.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MenuPageController">
+   <children>
+      <Button fx:id="InsertionSortButton" alignment="CENTER" contentDisplay="CENTER" layoutX="253.0" layoutY="290.0" mnemonicParsing="false" onAction="#InsertionSortButtonPressed" text="Sorting" textAlignment="CENTER" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="600.0" AnchorPane.rightAnchor="600.0">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Button>
+      <Button fx:id="GraphTraversal" layoutX="416.0" layoutY="290.0" mnemonicParsing="false" onAction="#GraphTraversalButtonPressed" text="Graph Traversal" AnchorPane.bottomAnchor="200.0" AnchorPane.rightAnchor="120.0">
+         <font>
+            <Font size="40.0" />
+         </font></Button>
+      <Button fx:id="SearchButton" alignment="CENTER" contentDisplay="CENTER" layoutX="57.0" layoutY="290.0" mnemonicParsing="false" onAction="#SearchButtonPressed" text="Searching" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="1080.0">
+         <font>
+            <Font size="40.0" />
+         </font></Button>
+      <AnchorPane fx:id="SearchPane" layoutX="63.0" layoutY="-32.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@MenuPage.css" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="1080.0" AnchorPane.topAnchor="250.0" />
+      <AnchorPane fx:id="SortPane" layoutX="482.0" layoutY="97.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@MenuPage.css" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="600.0" AnchorPane.rightAnchor="600.0" AnchorPane.topAnchor="250.0" />
+      <AnchorPane fx:id="GraphPane" layoutX="718.0" layoutY="234.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@MenuPage.css" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="1087.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="250.0" />
+   </children>
+</AnchorPane>
