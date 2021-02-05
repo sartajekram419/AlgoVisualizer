@@ -16,6 +16,7 @@ AlgoVisualizer is an algorithm visualizing application made as the project for C
 ## Demo:
 
 ### Starting Page:
+![Alt text](https://github.com/sartajekram419/AlgoVisualizer/blob/main/DemoResources/StartPage.gif)
 
 ### Menu Page:
 
