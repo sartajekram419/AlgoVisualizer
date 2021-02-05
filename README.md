@@ -19,20 +19,30 @@ AlgoVisualizer is an algorithm visualizing application made as the project for C
 ![Alt text](https://github.com/sartajekram419/AlgoVisualizer/blob/main/DemoResources/StartPage.gif)
 
 ### Menu Page:
+![Alt text](https://github.com/sartajekram419/AlgoVisualizer/blob/main/DemoResources/MenuPage.png)
 
 ### Sorting Algorithms:
 #### Insertion Sort
+![Alt text](https://github.com/sartajekram419/AlgoVisualizer/blob/main/DemoResources/Insertion.gif)
 #### Selection Sort
+![Alt text](https://github.com/sartajekram419/AlgoVisualizer/blob/main/DemoResources/Selection.gif)
 #### Quick Sort
+![Alt text](https://github.com/sartajekram419/AlgoVisualizer/blob/main/DemoResources/Quick.gif)
 #### Bubble Sort
+![Alt text](https://github.com/sartajekram419/AlgoVisualizer/blob/main/DemoResources/Bubble.gif)
 #### Merge Sort
+![Alt text](https://github.com/sartajekram419/AlgoVisualizer/blob/main/DemoResources/Merge.gif)
 
 ### Graph Traversal:
 #### DFS
+![Alt text](https://github.com/sartajekram419/AlgoVisualizer/blob/main/DemoResources/DFS.gif)
 #### BFS
+![Alt text](https://github.com/sartajekram419/AlgoVisualizer/blob/main/DemoResources/BFS.gif)
 
 ### Searching Algorithms:
 #### Binary Search
+![Alt text](https://github.com/sartajekram419/AlgoVisualizer/blob/main/DemoResources/Binary.gif)
 #### Linear Search
+![Alt text](https://github.com/sartajekram419/AlgoVisualizer/blob/main/DemoResources/Linear.gif)
 
 
