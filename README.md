@@ -51,4 +51,4 @@ The application has 2 types of searching algorithm. There are options available 
 ![Alt text](https://github.com/sartajekram419/AlgoVisualizer/blob/main/DemoResources/Linear.gif)
 
 ## Documentation:
-* [Documentation for All Classes of AlgoVisualizer.]()
+* [Documentation for All the Classes of AlgoVisualizer.](https://github.com/sartajekram419/AlgoVisualizer/tree/main/JavaDoc%20Documentation/sample/package-summary.html)
