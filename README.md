@@ -22,6 +22,7 @@ AlgoVisualizer is an algorithm visualizing application made as the project for C
 ![Alt text](https://github.com/sartajekram419/AlgoVisualizer/blob/main/DemoResources/MenuPage.png)
 
 ### Sorting Algorithms:
+The application has 5 sorting algorithms. There are options available to change the size of the array, give customized inputs, change the speed of transition and pause the transition.
 #### Insertion Sort
 ![Alt text](https://github.com/sartajekram419/AlgoVisualizer/blob/main/DemoResources/Insertion.gif)
 #### Selection Sort
@@ -34,6 +35,7 @@ AlgoVisualizer is an algorithm visualizing application made as the project for C
 ![Alt text](https://github.com/sartajekram419/AlgoVisualizer/blob/main/DemoResources/Merge.gif)
 
 ### Graph Traversal:
+
 #### DFS
 ![Alt text](https://github.com/sartajekram419/AlgoVisualizer/blob/main/DemoResources/DFS.gif)
 #### BFS
