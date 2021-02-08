@@ -16,11 +16,11 @@ AlgoVisualizer is an algorithm visualizing application made as the project for C
 ## Demo:
 
 ### Starting Page:
-This is the starting page for this application. The user can proceed by pressing Enter.
+This is the starting page for this application. The user can proceed by pressing Enter.<br/>
 ![Alt text](https://github.com/sartajekram419/AlgoVisualizer/blob/main/DemoResources/StartPage.gif)
 
 ### Menu Page:
-There are 3 different types of algorithms in this application: Searching algorithms, Sorting algorithms and Graph Traversal algorithms. The user can select any one them to proceed.
+There are 3 different types of algorithms in this application: Searching algorithms, Sorting algorithms and Graph Traversal algorithms. The user can select any one them to proceed.\
 ![Alt text](https://github.com/sartajekram419/AlgoVisualizer/blob/main/DemoResources/MenuPage.png)
 
 ### Sorting Algorithms:
