@@ -15,15 +15,26 @@ import java.util.List;
  * @author Nifty_180041219
  *
  */
-
 public class MergeSort extends AbstractSort {
 
     private ArrayList<Transition> transitions;
 
+    /**
+     * This constructor sets the transition arraylist
+     *
+     * @author Nifty_180041219
+     *
+     */
     public MergeSort() {
         this.transitions = new ArrayList<>();
     }
 
+    /**
+     * This method sets the width of a node
+     *
+     * @author Nifty_180041219
+     *
+     */
     public void setX() {
         X = SortingPageController.WINDOW_WIDTH / SortingPageController.NO_OF_NODES;
     }
@@ -91,6 +102,14 @@ public class MergeSort extends AbstractSort {
         return transitions;
     }
 
+    /**
+     * This method starts the merge sort
+     *
+     * @author Nifty_180041219
+     *
+     * @param arr Array of nodes
+     *
+     */
     @Override
     public ArrayList<Transition> startSort(Node[] arr) {
         // ArrayList<Transition> transitions = new ArrayList<>();

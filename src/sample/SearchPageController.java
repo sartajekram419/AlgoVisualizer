@@ -30,14 +30,25 @@ import java.util.Random;
  * @author Sajid_180041203
  * @author Nifty_180041219
  */
-
 public class SearchPageController {
 
     private ArrayList<SearchNode> searchNodeList;
     private Timeline visualizer;
 
+
+    /**
+     * It denotes the array size
+     */
     public static int arraySize = 5;
+
+    /**
+     * It denotes the array
+     */
     public int[] array;
+
+    /**
+     * It denotes the value of the searching element
+     */
     public int searchElement = 4;
 
     @FXML

@@ -12,20 +12,37 @@ import java.util.Arrays;
  * @author Sajid_180041203
  *
  */
-
-
 public class InsertionSort extends AbstractSort {
 
     private ArrayList<Transition> transitions;
 
+    /**
+     * This constructor sets the transition arraylist
+     *
+     * @author Sajid_180041203
+     *
+     */
     public InsertionSort() {
         this.transitions = new ArrayList<>();
     }
 
+    /**
+     * This method sets the width of a node
+     *
+     * @author Sajid_180041203
+     *
+     */
     public void setX(){
         X = SortingPageController.WINDOW_WIDTH / SortingPageController.NO_OF_NODES;
     }
 
+    /**
+     * This method starts the insertion sort
+     *
+     * @author Sajid_180041203
+     *
+     * @param nodes Array of nodes
+     */
     @Override
     public ArrayList <Transition> startSort(Node[] nodes) {
         for (int i = 1; i < nodes.length; i++) {

@@ -32,9 +32,8 @@ import java.util.ResourceBundle;
  *
  * @author Nifty_180041219
  * @author Sajid_180041203
- *
+ * @author Sartaj_180041204
  */
-
 public class SortingPageController implements Initializable {
 
     @FXML private Button pauseButton;
@@ -250,6 +249,11 @@ public class SortingPageController implements Initializable {
         SortingPagePane.getChildren().addAll(Arrays.asList(nodes));
     }
 
+    /**
+     * This initalizes when the class is created
+     *
+     * @author Sartaj_180041204
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 

@@ -17,11 +17,31 @@ import java.util.List;
  *
  */
 public abstract class AbstractSort {
+
+    /**
+     * It denotes the color of the nodes at the start
+     */
     public final Color START_COLOR = Color.WHITE;
+
+    /**
+     * It denotes the color of the nodes when selected
+     */
     public final Color SELECT_COLOR = Color.web("0xf4511e",1.0);
+
+    /**
+     * It denotes the color of the nodes at last
+     */
     public final Color FINAL_COLOR = Color.LIGHTGREEN;
+
+    /**
+     * It denotes the color of the nodes when they are sorted
+     */
     public final Color SORTED_COLOR = Color.VIOLET;
 
+
+    /**
+     * It denotes the color of the width of the nodes
+     */
     static public int X;
     ParallelTransition p;
     FillTransition f;
@@ -90,7 +110,20 @@ public abstract class AbstractSort {
         return p;
     }
 
+    /**
+     * Abstract method to start the sorting
+     *
+     * @author Sartaj_180041204
+     *
+     * @param a Array of nodes
+     */
     public abstract ArrayList<Transition> startSort(Node[] a);
 
+    /**
+     * This is an abstract method to set the value of node width
+     *
+     * @author Sartaj_180041204
+     *
+     */
     public abstract void setX();
 }

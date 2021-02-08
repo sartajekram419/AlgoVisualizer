@@ -1,8 +1,9 @@
 package sample;
 
+import javafx.animation.Transition;
+
 import java.util.ArrayList;
 import java.util.Arrays;
-import javafx.animation.Transition;
 
 
 /**
@@ -11,11 +12,16 @@ import javafx.animation.Transition;
  * @author Sajid_180041203
  *
  */
-
 public class BubbleSort extends AbstractSort {
     private ArrayList<Transition> transitions;
     private boolean f;
 
+    /**
+     * This constructor sets the transition arraylist
+     *
+     * @author Sajid_180041203
+     *
+     */
     public BubbleSort() {
         transitions = new ArrayList<>();
     }
@@ -43,6 +49,13 @@ public class BubbleSort extends AbstractSort {
         }
     }
 
+    /**
+     * This method starts the bubble sort
+     *
+     * @author Sajid_180041203
+     *
+     * @param nodes Array of nodes
+     */
     @Override
     public ArrayList<Transition> startSort(Node[] nodes) {
         bubbleSort(nodes);
@@ -50,6 +63,12 @@ public class BubbleSort extends AbstractSort {
         return transitions;
     }
 
+    /**
+     * This method sets the width of a node
+     *
+     * @author Sajid_180041203
+     *
+     */
     @Override
     public void setX() {
         X = SortingPageController.WINDOW_WIDTH / SortingPageController.NO_OF_NODES;

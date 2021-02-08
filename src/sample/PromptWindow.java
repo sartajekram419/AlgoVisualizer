@@ -11,6 +11,13 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+/**
+ * This class is there for a prompt window
+ *
+ * @author Nifty_180041219
+ * @author Sajid_180041203
+ *
+ */
 public class PromptWindow {
     private Label textLabel;
     private TextField textField;

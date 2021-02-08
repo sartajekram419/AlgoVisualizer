@@ -17,10 +17,22 @@ public class QuickSort extends AbstractSort {
     private static final Color PIVOT_COLOR = Color.web("0xf4511e",1.0);
     private ArrayList<Transition> transitions;
 
+    /**
+     * This constructor sets the transition arraylist
+     *
+     * @author Nifty_180041219
+     *
+     */
     public QuickSort() {
         this.transitions = new ArrayList<>();
     }
 
+    /**
+     * This method sets the width of a node
+     *
+     * @author Nifty_180041219
+     *
+     */
     public void setX() {
         X = SortingPageController.WINDOW_WIDTH / SortingPageController.NO_OF_NODES;
     }
@@ -51,6 +63,14 @@ public class QuickSort extends AbstractSort {
         }
     }
 
+    /**
+     * This method starts the quick sort
+     *
+     * @author Nifty_180041219
+     *
+     * @param nodes Array of nodes
+     *
+     */
     @Override
     public ArrayList<Transition> startSort(Node[] nodes) {
         quickSort(nodes, 0, nodes.length-1);

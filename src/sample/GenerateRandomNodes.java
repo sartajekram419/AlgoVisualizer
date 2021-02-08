@@ -1,10 +1,9 @@
 package sample;
 
 
-import java.util.Random;
-
-import javafx.scene.effect.Glow;
 import javafx.scene.paint.Color;
+
+import java.util.Random;
 
 
 /**
@@ -14,8 +13,22 @@ import javafx.scene.paint.Color;
  *
  */
 public class GenerateRandomNodes {
+
+    /**
+     * Default constructor
+     *
+     * @author Nifty_180041219
+     *
+     */
     public GenerateRandomNodes(){};
 
+    /**
+     * This method generates random nodes
+     *
+     * @author Nifty_180041219
+     *
+     * @param len the length of the array
+     */
     public static Node[] GenerateRandomNodes(int len) {
         Node nodes[] = new Node[len];
         Random r = new Random();
@@ -29,6 +42,14 @@ public class GenerateRandomNodes {
         return nodes;
     }
 
+    /**
+     * This method sets the dimension of a node
+     *
+     * @author Nifty_180041219
+     *
+     * @param len Length of the array
+     * @param nodes The node
+     */
     public static void setNodeDim(Node nodes, int len) {
         nodes.setWidth(SortingPageController.WINDOW_WIDTH / len - SortingPageController.X_GAP);
         nodes.setHeight(((SortingPageController.WINDOW_HEIGHT - SortingPageController.BUTTON_BOUNDARY) / len) * nodes.getValue());

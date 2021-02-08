@@ -55,6 +55,11 @@ public class SearchCustomInputController implements Initializable {
         OkButton.getScene().getWindow().hide();
     }
 
+    /**
+     * This method initializes the class
+     *
+     * @author Sajid_180041203
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 

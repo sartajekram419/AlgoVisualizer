@@ -23,6 +23,13 @@ public class AlgoVisualizer {
     Stack<Integer> stack;
     Queue<Integer> queue;
 
+    /**
+     * This constructor sets the graph
+     *
+     * @author Sartaj_180041204
+     *
+     * @param g source node
+     */
     public AlgoVisualizer(Graph g){
         graph = g;
     }

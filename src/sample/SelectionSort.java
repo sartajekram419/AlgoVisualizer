@@ -14,7 +14,6 @@ import java.util.Arrays;
  * @author Sartaj_180041204
  *
  */
-
 public class SelectionSort extends AbstractSort {
 
     private ArrayList<Transition> transitions;
@@ -28,10 +27,24 @@ public class SelectionSort extends AbstractSort {
         return p;
     }
 
+    /**
+     * This method sets the width of a node
+     *
+     * @author Sartaj_180041204
+     *
+     */
     public void setX(){
         X = SortingPageController.WINDOW_WIDTH / SortingPageController.NO_OF_NODES;
     }
 
+    /**
+     * This method starts the selection sort
+     *
+     * @author Sartaj_180041204
+     *
+     * @param nodes Array of nodes
+     *
+     */
     @Override
     public ArrayList <Transition> startSort(Node[] nodes) {
         transitions = new ArrayList<>();

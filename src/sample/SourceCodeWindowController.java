@@ -12,7 +12,6 @@ import javafx.scene.control.TextArea;
  * @author Nifty_180041219
  *
  */
-
 public class SourceCodeWindowController {
 
     @FXML

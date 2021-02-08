@@ -12,6 +12,14 @@ import javafx.scene.paint.Color;
 public class GenerateCustomNodes {
     public GenerateCustomNodes(){};
 
+    /**
+     * This method generates random inputs
+     *
+     * @author Sajid_180041203
+     *
+     * @param len Length of the array
+     * @param arr The array
+     */
     public static Node[] GenerateCustomNodes(int len, int[] arr) {
 
         int m = 0;
@@ -31,6 +39,16 @@ public class GenerateCustomNodes {
         return nodes;
     }
 
+
+    /**
+     * This method sets the dimension of a node
+     *
+     * @author Sajid_180041203
+     *
+     * @param len Length of the array
+     * @param m maximum value of the array
+     * @param nodes The node
+     */
     public static void setNodeDim(Node nodes, int len, int m) {
         nodes.setWidth(SortingPageController.WINDOW_WIDTH / len - SortingPageController.X_GAP);
         nodes.setHeight((SortingPageController.WINDOW_HEIGHT / m) * nodes.getValue());

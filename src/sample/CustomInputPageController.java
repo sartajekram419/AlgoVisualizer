@@ -20,6 +20,9 @@ public class CustomInputPageController implements Initializable {
     @FXML private Button OkButton;
     @FXML private TextArea TextInput;
 
+    /**
+     * It denotes the array of custom input
+     */
     public static int[] arr;
 
     @FXML
@@ -50,6 +53,11 @@ public class CustomInputPageController implements Initializable {
         OkButton.getScene().getWindow().hide();
     }
 
+    /**
+     * This method initializes when the class is created
+     *
+     * @author Sajid_180041203
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 

@@ -140,6 +140,13 @@ public class GraphNode {
         return node;
     }
 
+    /**
+     * This method sets the circle into the node
+     *
+     * @author Sartaj_180041204
+     *
+     * @param node a circle
+     */
     public void setNode(Circle node) {
         this.node = node;
     }
@@ -151,19 +158,52 @@ public class GraphNode {
         nodeID = n;
     }
 
+    /**
+     * This method returns the nodeID as string
+     *
+     * @author Sartaj_180041204
+     *
+     * @return String returns nodeID
+     */
     @Override
     public String toString() {
         return String.valueOf(nodeID);
     }
 
+
+    /**
+     * This method sets adjacent nodes
+     *
+     * @author Sartaj_180041204
+     *
+     * @param adjGraphNode Adjacent graph node
+     * @param edge An edge
+     */
     public void addAdjacentNode(GraphNode adjGraphNode, Line edge){
         adjacentNodes.add(new AdjacentNode(adjGraphNode, edge));
     }
 
+    /**
+     * This method sets adjacent nodes
+     *
+     * @author Sartaj_180041204
+     *
+     * @param adjGraphNode Adjacent graph node
+     * @param edge An edge
+     * @param displayPane Pane that displays the edge
+     */
     public void addAdjacentNode(GraphNode adjGraphNode, Line edge, Pane displayPane) {
         adjacentNodes.add(new AdjacentNode(adjGraphNode, edge, displayPane));
     }
 
+    /**
+     * This method sets adjacent nodes
+     *
+     * @author Sartaj_180041204
+     *
+     * @param adjGraphNode Adjacent graph node
+     * @param displayPane Pane that displays the edge
+     */
     public void addAdjacentNode(GraphNode adjGraphNode, Pane displayPane) {
         adjacentNodes.add(new AdjacentNode(adjGraphNode, Graph.createEdge(this, adjGraphNode), displayPane));
     }
